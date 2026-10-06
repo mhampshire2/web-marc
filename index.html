@@ -16,25 +16,25 @@
 <style>
 /* Layout: left-aligned editorial column; hero pairs headline with an open circle (Gestalt closure) holding the portrait */
 :root{
-  --bg:#ECEFEA; --surface:#F7F8F5; --fg:#1E2A26; --muted:#56635D; --line:#CBD3CC;
-  --accent:#2F5E4F; --accent-fg:#F7F8F5; --brass:#A9824A;
+  --bg:#FAFBF9; --surface:#FFFFFF; --soft:#EEF5F1; --fg:#2B3532; --muted:#67736E; --line:#E1E7E3;
+  --accent:#BFDCCF; --accent-fg:#1F3D33; --ink:#4F7E6F; --brass:#C9A979;
   --display:"Gloock", Georgia, "Times New Roman", serif;
   --body:"Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
   --wrap:1120px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#141A18; --surface:#1B2320; --fg:#E4E9E4; --muted:#9BA8A1; --line:#2E3934;
-  --accent:#8CC2AE; --accent-fg:#10201A; --brass:#D2AE74; color-scheme:dark}}
+  --bg:#161C1A; --surface:#1D2522; --soft:#22302B; --fg:#E6EBE7; --muted:#A0ADA6; --line:#2F3A35;
+  --accent:#9CCDB9; --accent-fg:#12221C; --ink:#9CCDB9; --brass:#D6B683; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#141A18; --surface:#1B2320; --fg:#E4E9E4; --muted:#9BA8A1; --line:#2E3934;
-  --accent:#8CC2AE; --accent-fg:#10201A; --brass:#D2AE74; color-scheme:dark}
+  --bg:#161C1A; --surface:#1D2522; --soft:#22302B; --fg:#E6EBE7; --muted:#A0ADA6; --line:#2F3A35;
+  --accent:#9CCDB9; --accent-fg:#12221C; --ink:#9CCDB9; --brass:#D6B683; color-scheme:dark}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
 .wrap{max-width:var(--wrap);margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
 h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.1;text-wrap:balance;margin:0}
 h2{font-size:clamp(2rem,4vw,2.9rem)}
@@ -53,7 +53,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:co
 .lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px}
 .lang button{all:unset;cursor:pointer;font-size:.8rem;font-weight:600;letter-spacing:.04em;padding:5px 10px;border-radius:999px;color:var(--muted)}
 .lang button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
-.lang button:focus-visible{outline:2px solid var(--accent)}
+.lang button:focus-visible{outline:2px solid var(--ink)}
 @media (max-width:860px){.links{display:none}.lang{margin-left:auto}}
 
 /* Buttons */
@@ -70,6 +70,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:co
 .hero-copy{display:grid;gap:26px;min-width:0}
 .hero-copy .lead{font-size:1.15rem;max-width:34em;color:var(--muted)}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.cta-note{font-size:.9rem;color:var(--muted);margin-top:-12px}
 .facts{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:.92rem;color:var(--muted);padding:0;margin:0;list-style:none}
 .facts li{display:flex;align-items:center;gap:8px}
 .facts li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--brass)}
@@ -82,7 +83,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:co
 @keyframes draw{from{stroke-dashoffset:var(--len)}}
 .portrait{position:absolute;inset:9%;border-radius:50%;overflow:hidden;background:var(--surface);display:grid;place-items:center}
 .portrait img{width:100%;height:100%;object-fit:cover;display:block}
-.portrait .initials{font-family:var(--display);font-size:clamp(3rem,9vw,5.5rem);color:var(--accent)}
+.portrait .initials{font-family:var(--display);font-size:clamp(3rem,9vw,5.5rem);color:var(--ink)}
 .closure{margin-top:18px;font-size:.88rem;color:var(--muted);max-width:30em;padding-left:14px;border-left:2px solid var(--brass)}
 @media (max-width:860px){.hero{grid-template-columns:1fr}.figure{max-width:320px;justify-self:start}}
 
@@ -97,8 +98,14 @@ section.block{padding-block:clamp(56px,8vw,104px);border-top:1px solid var(--lin
 .approach p{max-width:38em}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;padding:0;list-style:none}
 .tags li{font-size:.9rem;padding:6px 14px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
-.tags li.main{border-color:var(--accent);color:var(--accent);font-weight:600}
+.tags li.main{border-color:var(--ink);color:var(--ink);font-weight:600}
 
+.beliefs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,40px);margin-top:56px;padding:0;list-style:none}
+.beliefs li{display:grid;gap:8px;align-content:start;padding-top:20px;border-top:2px solid var(--brass)}
+.beliefs p{color:var(--muted)}
+@media (max-width:760px){.beliefs{grid-template-columns:1fr}}
+.steps p a{color:var(--ink);font-weight:600}
+.book-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
 /* Areas */
 .areas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(24px,5vw,64px);margin-top:44px;padding:0;list-style:none}
 .areas li{padding:22px 0;border-top:1px solid var(--line);display:grid;gap:6px}
@@ -131,17 +138,19 @@ section.block{padding-block:clamp(56px,8vw,104px);border-top:1px solid var(--lin
 .creds span{font-size:.9rem;color:var(--muted)}
 
 /* Contact */
-.contact{background:var(--accent);color:var(--accent-fg);border-radius:28px;padding:clamp(32px,5vw,64px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(28px,5vw,64px)}
+.contact{background:var(--soft);color:var(--fg);border-radius:28px;padding:clamp(32px,5vw,64px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(28px,5vw,64px)}
 .contact h2{font-size:clamp(2.2rem,4.6vw,3.4rem)}
 .contact .lead{margin-top:16px;opacity:.85;max-width:30em}
-.contact .btn-light{background:var(--accent-fg);color:var(--accent);margin-top:28px}
+.contact .btn-light{background:var(--accent);color:var(--accent-fg)}
+.contact .btn-outline{border-color:var(--ink);color:var(--ink);background:var(--surface)}
+.contact .book-row{margin-top:28px}
 .contact dl{margin:0;display:grid;gap:22px}
-.contact dt{font-size:.85rem;opacity:.75;margin-bottom:4px}
+.contact dt{font-size:.85rem;color:var(--muted);margin-bottom:4px}
 .contact dd{margin:0;font-size:1.05rem}
 .contact dd a{text-underline-offset:3px}
 .phone-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
-.copy{all:unset;cursor:pointer;font-size:.8rem;font-weight:600;padding:4px 10px;border-radius:999px;border:1px solid color-mix(in srgb,var(--accent-fg) 45%,transparent)}
-.copy:focus-visible{outline:2px solid var(--accent-fg)}
+.copy{all:unset;cursor:pointer;font-size:.8rem;font-weight:600;padding:4px 10px;border-radius:999px;border:1px solid var(--line);background:var(--surface)}
+.copy:focus-visible{outline:2px solid var(--ink)}
 @media (max-width:760px){.contact{grid-template-columns:1fr}}
 
 footer{padding-block:40px 110px;font-size:.88rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-between}
@@ -156,6 +165,7 @@ footer{padding-block:40px 110px;font-size:.88rem;color:var(--muted);display:flex
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.9 2.9 4.6 4 1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></symbol>
+  <symbol id="cal" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 3v3M17 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></symbol>
 </svg>
 
 <header>
@@ -182,12 +192,13 @@ footer{padding-block:40px 110px;font-size:.88rem;color:var(--muted);display:flex
 <main id="top">
   <div class="wrap hero">
     <div class="hero-copy">
-      <h1 data-i18n="h1">Menos darle vueltas. Más vivirlo.</h1>
-      <p class="lead" data-i18n="lead">Soy Marc Hampshire, psicólogo en Barcelona. Trabajo desde la terapia Gestalt para que dejes de analizarte desde fuera y empieces a notar el cambio por dentro. Presencial en el Eixample y online, en castellano, catalán o inglés.</p>
+      <h1 data-i18n="h1">No vienes a que te arreglen. Vienes a encontrarte.</h1>
+      <p class="lead" data-i18n="lead">Soy Marc Hampshire, psicólogo Gestalt en Barcelona. Te acompaño a mirar lo que te pasa sin juicio y sin recetas, para que puedas vivir más desde quien eres y menos desde lo que se espera de ti. Presencial en el Eixample y online, en castellano, catalán o inglés.</p>
       <div class="cta-row">
-        <a class="btn btn-primary wa-link" href="https://wa.me/34624080367" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg><span data-i18n="cta1">Escríbeme por WhatsApp</span></a>
-        <a class="btn btn-ghost" href="#sesiones" data-i18n="cta2">Ver sesiones y precios</a>
+        <a class="btn btn-primary" href="https://calendar.app.google/8UB1FcW1vVtsC4eD9" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#cal"/></svg><span data-i18n="bk1">Llamada gratuita de 15 min</span></a>
+        <a class="btn btn-ghost" href="https://calendar.app.google/gUtvc1tR1LRQqWUb9" target="_blank" rel="noopener" data-i18n="bk2">Reservar sesión presencial</a>
       </div>
+      <p class="cta-note" data-i18n="bknote">Sin compromiso: para conocernos y ver si encajamos.</p>
       <ul class="facts">
         <li data-i18n="f1">Colegiado COPC nº 30868</li>
         <li data-i18n="f2">Presencial y online</li>
@@ -211,8 +222,8 @@ footer{padding-block:40px 110px;font-size:.88rem;color:var(--muted);display:flex
       <h2 data-i18n="s1h">Cómo trabajo</h2>
       <div class="approach">
         <p class="quote" data-i18n="quote">No estoy aquí para arreglarte como si fueras una máquina rota.</p>
-        <p data-i18n="s1p1">La terapia no va de que yo te dé respuestas. Va de prestar atención a lo que pasa ahora: en tu cuerpo, en tus relaciones y aquí, en la sesión. Desde ahí, lo que se repite se ve más claro y puedes empezar a elegir distinto.</p>
-        <p data-i18n="s1p2">Mi base es la terapia Gestalt, y la combino con herramientas de otros enfoques según lo que necesites en cada momento.</p>
+        <p data-i18n="s1p1">Creo que lo que cura no es una técnica, sino el encuentro entre dos personas que se atreven a estar presentes. Por eso en sesión no me escondo detrás de un papel: trabajamos con lo que pasa aquí y ahora, en ti, en mí y entre los dos.</p>
+        <p data-i18n="s1p2">No se trata de convertirte en una versión más correcta de ti, sino de poder mostrarte como eres, sin máscara, y desde ahí decidir cómo quieres vivir. Mi base es la terapia Gestalt, y la combino con herramientas de otros enfoques según lo que necesites.</p>
         <ul class="tags">
           <li class="main">Gestalt</li>
           <li data-i18n="t1">Mentalización (MBT)</li>
@@ -222,6 +233,13 @@ footer{padding-block:40px 110px;font-size:.88rem;color:var(--muted);display:flex
           <li data-i18n="t4">Humanista</li>
         </ul>
       </div>
+    </div>
+    <div class="wrap">
+      <ul class="beliefs">
+        <li><h3 data-i18n="b1h">La persona antes que la técnica</h3><p data-i18n="b1p">Las herramientas ayudan, pero lo que transforma es la relación. Por eso me muestro como persona, no solo como profesional.</p></li>
+        <li><h3 data-i18n="b2h">La crisis también es una puerta</h3><p data-i18n="b2p">Lo que hoy te desborda suele señalar justo lo que pide ser atendido. No lo tapamos: lo escuchamos.</p></li>
+        <li><h3 data-i18n="b3h">Sanar es una forma de vivir</h3><p data-i18n="b3p">No buscamos que encajes mejor, sino que vivas con más verdad, más presencia y también más disfrute.</p></li>
+      </ul>
     </div>
   </section>
 
@@ -255,6 +273,10 @@ footer{padding-block:40px 110px;font-size:.88rem;color:var(--muted);display:flex
         <div class="session"><h3 data-i18n="p2h">Terapia de pareja</h3><span class="price">100 €</span><p data-i18n="p2p">Para parejas que quieren entender qué les pasa y cómo salir del mismo bucle.</p></div>
         <div class="session"><h3 data-i18n="p3h">Grupo de hombres</h3><span class="price">40 € <small data-i18n="per">/ sesión</small></span><p data-i18n="p3p">Martes cada dos semanas, de 18:30 a 20:00.</p></div>
       </div>
+      <div class="book-row">
+        <a class="btn btn-primary" href="https://calendar.app.google/gUtvc1tR1LRQqWUb9" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#cal"/></svg><span data-i18n="bk2b">Reservar sesión presencial</span></a>
+        <a class="btn btn-ghost" href="https://calendar.app.google/8UB1FcW1vVtsC4eD9" target="_blank" rel="noopener" data-i18n="bk1b">Antes, una llamada gratuita de 15 min</a>
+      </div>
       <div class="fine">
         <p data-i18n="fine1">Si el precio es un obstáculo, coméntamelo: tengo tarifa adaptada.</p>
         <p data-i18n="fine2">Puedes pagar por transferencia, tarjeta, PayPal o en efectivo. Emito factura.</p>
@@ -266,7 +288,7 @@ footer{padding-block:40px 110px;font-size:.88rem;color:var(--muted);display:flex
     <div class="wrap">
       <h2 data-i18n="s4h">Cómo empezar</h2>
       <ol class="steps">
-        <li><h3 data-i18n="st1h">Escríbeme</h3><p data-i18n="st1p">Por WhatsApp, teléfono o email. Con un par de líneas sobre lo que te trae es suficiente.</p></li>
+        <li><h3 data-i18n="st1h">Una llamada para conocernos</h3><p data-i18n="st1p"><a href="https://calendar.app.google/8UB1FcW1vVtsC4eD9" target="_blank" rel="noopener">Reserva 15 minutos gratis</a> para contarme qué te trae. Si lo prefieres, escríbeme por WhatsApp.</p></li>
         <li><h3 data-i18n="st2h">Tres sesiones para conocernos</h3><p data-i18n="st2p">Las tres primeras duran una hora. Nos sirven para entender bien qué te pasa y qué necesitas.</p></li>
         <li><h3 data-i18n="st3h">Plan de tratamiento</h3><p data-i18n="st3p">En la cuarta sesión acordamos juntos hacia dónde vamos y cómo.</p></li>
         <li><h3 data-i18n="st4h">Seguimos</h3><p data-i18n="st4p">Sesiones de 45 a 50 minutos, con la frecuencia que acordemos.</p></li>
@@ -295,8 +317,12 @@ footer{padding-block:40px 110px;font-size:.88rem;color:var(--muted);display:flex
       <div class="contact">
         <div>
           <h2 data-i18n="s6h">Hablemos</h2>
-          <p class="lead" data-i18n="s6p">Dar el primer paso suele ser lo que más cuesta. Escríbeme y te respondo lo antes posible.</p>
-          <a class="btn btn-light wa-link" href="https://wa.me/34624080367" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg><span data-i18n="cta1b">Escribir por WhatsApp</span></a>
+          <p class="lead" data-i18n="s6p">Dar el primer paso suele ser lo que más cuesta. Puedes reservar directamente o escribirme y te respondo lo antes posible.</p>
+          <div class="book-row">
+            <a class="btn btn-light" href="https://calendar.app.google/8UB1FcW1vVtsC4eD9" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#cal"/></svg><span data-i18n="bk1c">Llamada gratuita de 15 min</span></a>
+            <a class="btn btn-outline" href="https://calendar.app.google/gUtvc1tR1LRQqWUb9" target="_blank" rel="noopener" data-i18n="bk2c">Reservar sesión presencial</a>
+            <a class="btn btn-outline wa-link" href="https://wa.me/34624080367" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg><span>WhatsApp</span></a>
+          </div>
         </div>
         <dl>
           <div>
@@ -332,20 +358,20 @@ footer{padding-block:40px 110px;font-size:.88rem;color:var(--muted);display:flex
   </footer>
 </div>
 
-<a class="btn btn-primary fab wa-link" href="https://wa.me/34624080367" target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true"><use href="#wa"/></svg><span data-i18n="fab">Pedir cita</span></a>
+<a class="btn btn-primary fab" href="https://calendar.app.google/8UB1FcW1vVtsC4eD9" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#cal"/></svg><span data-i18n="fab">Llamada gratuita</span></a>
 
 <script>
 const T = {
   ca:{
     nav1:"Com treballo",nav2:"Amb què t'ajudo",nav3:"Sessions",nav4:"Sobre mi",nav5:"Contacte",
-    h1:"Menys donar-hi voltes. Més viure-ho.",
-    lead:"Sóc en Marc Hampshire, psicòleg a Barcelona. Treballo des de la teràpia Gestalt perquè deixis d'analitzar-te des de fora i comencis a notar el canvi per dins. Presencial a l'Eixample i en línia, en català, castellà o anglès.",
+    h1:"No vens perquè t'arreglin. Vens a trobar-te.",
+    lead:"Sóc en Marc Hampshire, psicòleg Gestalt a Barcelona. T'acompanyo a mirar el que et passa sense judici i sense receptes, perquè puguis viure més des de qui ets i menys des del que s'espera de tu. Presencial a l'Eixample i en línia, en català, castellà o anglès.",
     cta1:"Escriu-me per WhatsApp",cta2:"Veure sessions i preus",
     f1:"Col·legiat COPC núm. 30868",f2:"Presencial i en línia",f3:"CA · ES · EN",
     closure:"En Gestalt, la llei de tancament diu que la ment tendeix a completar allò que queda obert. En teràpia passa una cosa semblant amb el que no hem tancat.",
     s1h:"Com treballo",quote:"No sóc aquí per arreglar-te com si fossis una màquina espatllada.",
-    s1p1:"La teràpia no consisteix en que jo et doni respostes. Consisteix a parar atenció al que passa ara: al teu cos, a les teves relacions i aquí, a la sessió. Des d'aquí, allò que es repeteix es veu més clar i pots començar a triar diferent.",
-    s1p2:"La meva base és la teràpia Gestalt, i la combino amb eines d'altres enfocaments segons el que necessitis a cada moment.",
+    s1p1:"Crec que el que cura no és una tècnica, sinó la trobada entre dues persones que s'atreveixen a ser presents. Per això a la sessió no m'amago darrere d'un paper: treballem amb el que passa aquí i ara, en tu, en mi i entre tots dos.",
+    s1p2:"No es tracta de convertir-te en una versió més correcta de tu, sinó de poder mostrar-te com ets, sense màscara, i des d'aquí decidir com vols viure. La meva base és la teràpia Gestalt, i la combino amb eines d'altres enfocaments segons el que necessitis.",
     t1:"Mentalització (MBT)",t2:"Teoria de l'aferrament",t3:"Cognitivoconductual (CBT)",t4:"Humanista",
     s2h:"Amb què et puc ajudar",s2p:"Treballo amb adolescents, adults i gent gran. Aquests són els motius de consulta més habituals, tot i que no cal que el teu tingui nom per començar.",
     a1h:"Relacions",a1p:"Patrons que es repeteixen a la parella, la família o les amistats. Dependència emocional i codependència.",
@@ -363,7 +389,7 @@ const T = {
     fine1:"Si el preu és un obstacle, comenta-m'ho: tinc tarifa adaptada.",
     fine2:"Pots pagar per transferència, targeta, PayPal o en efectiu. Faig factura.",
     s4h:"Com començar",
-    st1h:"Escriu-me",st1p:"Per WhatsApp, telèfon o correu. Amb un parell de línies sobre el que et porta n'hi ha prou.",
+    st1h:"Una trucada per conèixer-nos",st1p:"<a href=\"https://calendar.app.google/8UB1FcW1vVtsC4eD9\" target=\"_blank\" rel=\"noopener\">Reserva 15 minuts gratis</a> per explicar-me què et porta. Si ho prefereixes, escriu-me per WhatsApp.",
     st2h:"Tres sessions per conèixer-nos",st2p:"Les tres primeres duren una hora. Ens serveixen per entendre bé què et passa i què necessites.",
     st3h:"Pla de tractament",st3p:"A la quarta sessió acordem junts cap a on anem i com.",
     st4h:"Continuem",st4p:"Sessions de 45 a 50 minuts, amb la freqüència que acordem.",
@@ -371,20 +397,33 @@ const T = {
     ab1:"Sóc psicòleg col·legiat al Col·legi Oficial de Psicologia de Catalunya, amb un màster per la Universitat Autònoma de Barcelona i cinc anys de pràctica clínica.",
     ab2:"Atenc en català, castellà i anglès, a la meva consulta del carrer Diputació i a la Clínica ART. També condueixo un grup terapèutic per a homes.",
     c1:"Col·legiat núm. 30868",c2:"Màster, 2021",c3:"Teràpia en anglès",c4b:"5 anys",c4:"de pràctica clínica",
-    s6h:"Parlem",s6p:"Fer el primer pas sol ser el que més costa. Escriu-me i et respondré tan aviat com pugui.",
+    s6h:"Parlem",s6p:"Fer el primer pas sol ser el que més costa. Pots reservar directament o escriure'm i et respondré tan aviat com pugui.",
     cta1b:"Escriure per WhatsApp",d1:"Telèfon i WhatsApp",copy:"Copiar",copy2:"Copiar",d2:"Consulta",d3:"També a la Clínica ART",d4:"En línia",d4v:"Per videotrucada, siguis on siguis.",
-    foot:"Col·legiat núm. 30868 · Col·legi Oficial de Psicologia de Catalunya",fab:"Demanar cita",copied:"Copiat"
+    foot:"Col·legiat núm. 30868 · Col·legi Oficial de Psicologia de Catalunya",fab:"Trucada gratuïta",copied:"Copiat",
+    bk1:"Trucada gratuïta de 15 min",
+    bk2:"Reservar sessió presencial",
+    bknote:"Sense compromís: per conèixer-nos i veure si encaixem.",
+    b1h:"La persona abans que la tècnica",
+    b1p:"Les eines ajuden, però el que transforma és la relació. Per això em mostro com a persona, no només com a professional.",
+    b2h:"La crisi també és una porta",
+    b2p:"El que avui et desborda sol assenyalar justament el que demana ser atès. No ho tapem: ho escoltem.",
+    b3h:"Sanar és una manera de viure",
+    b3p:"No busquem que encaixis millor, sinó que visquis amb més veritat, més presència i també més gaudi.",
+    bk2b:"Reservar sessió presencial",
+    bk1b:"Abans, una trucada gratuïta de 15 min",
+    bk1c:"Trucada gratuïta de 15 min",
+    bk2c:"Reservar sessió presencial"
   },
   en:{
     nav1:"How I work",nav2:"What I help with",nav3:"Sessions",nav4:"About",nav5:"Contact",
-    h1:"Less overthinking. More living it.",
-    lead:"I'm Marc Hampshire, a psychologist in Barcelona. I work with Gestalt therapy, so you can stop analysing yourself from the outside and start feeling the change from within. In person in the Eixample or online, in English, Spanish or Catalan.",
+    h1:"You're not here to be fixed. You're here to find yourself.",
+    lead:"I'm Marc Hampshire, a Gestalt psychologist in Barcelona. I'll walk with you as you look at what's going on, without judgement and without recipes, so you can live more from who you are and less from what's expected of you. In person in the Eixample or online, in English, Spanish or Catalan.",
     cta1:"Message me on WhatsApp",cta2:"See sessions and fees",
     f1:"COPC registration no. 30868",f2:"In person and online",f3:"EN · ES · CA",
     closure:"In Gestalt, the law of closure says the mind tends to complete whatever is left open. Something similar happens in therapy with what we haven't closed.",
     s1h:"How I work",quote:"I'm not here to fix you like a broken machine.",
-    s1p1:"Therapy isn't about me handing you answers. It's about paying attention to what's happening now: in your body, in your relationships, and right here in the session. From there, what keeps repeating becomes clearer and you can start choosing differently.",
-    s1p2:"My foundation is Gestalt therapy, and I bring in tools from other approaches depending on what you need.",
+    s1p1:"I believe what heals isn't a technique but the meeting of two people willing to be present. So in our sessions I don't hide behind a role: we work with what's happening here and now, in you, in me and between us.",
+    s1p2:"It isn't about becoming a more correct version of yourself, but about being able to show up as you are, without a mask, and from there decide how you want to live. My foundation is Gestalt therapy, and I bring in tools from other approaches depending on what you need.",
     t1:"Mentalization (MBT)",t2:"Attachment theory",t3:"Cognitive behavioural (CBT)",t4:"Humanistic",
     s2h:"What I can help with",s2p:"I work with teenagers, adults and older adults. These are the most common reasons people come, but what you're going through doesn't need a name to get started.",
     a1h:"Relationships",a1p:"Patterns that keep repeating with partners, family or friends. Emotional dependency and codependency.",
@@ -402,7 +441,7 @@ const T = {
     fine1:"If the fee is a barrier, let me know: I offer a sliding scale.",
     fine2:"You can pay by bank transfer, card, PayPal or cash. Invoices available.",
     s4h:"How to start",
-    st1h:"Get in touch",st1p:"By WhatsApp, phone or email. A couple of lines about what brings you is enough.",
+    st1h:"A call to get to know each other",st1p:"<a href=\"https://calendar.app.google/8UB1FcW1vVtsC4eD9\" target=\"_blank\" rel=\"noopener\">Book 15 free minutes</a> to tell me what brings you. If you prefer, message me on WhatsApp.",
     st2h:"Three sessions to get to know each other",st2p:"The first three last an hour. They help us understand what's going on and what you need.",
     st3h:"Treatment plan",st3p:"In the fourth session we agree together on where we're heading and how.",
     st4h:"Keep going",st4p:"Sessions of 45 to 50 minutes, as often as we agree.",
@@ -410,9 +449,22 @@ const T = {
     ab1:"I'm a psychologist registered with the Official College of Psychology of Catalonia, with a master's from the Autonomous University of Barcelona and five years of clinical practice.",
     ab2:"I work in English, Spanish and Catalan, at my practice on Carrer de la Diputació and at Clínica ART. I also lead a therapy group for men.",
     c1:"Registration no. 30868",c2:"Master's, 2021",c3:"Therapy in English",c4b:"5 years",c4:"of clinical practice",
-    s6h:"Let's talk",s6p:"Taking the first step is often the hardest part. Send me a message and I'll get back to you as soon as I can.",
+    s6h:"Let's talk",s6p:"Taking the first step is often the hardest part. You can book directly, or send me a message and I'll get back to you as soon as I can.",
     cta1b:"Message on WhatsApp",d1:"Phone and WhatsApp",copy:"Copy",copy2:"Copy",d2:"Practice",d3:"Also at Clínica ART",d4:"Online",d4v:"By video call, wherever you are.",
-    foot:"COPC registration no. 30868 · Official College of Psychology of Catalonia",fab:"Book a session",copied:"Copied"
+    foot:"COPC registration no. 30868 · Official College of Psychology of Catalonia",fab:"Free call",copied:"Copied",
+    bk1:"Free 15-minute call",
+    bk2:"Book an in-person session",
+    bknote:"No commitment: a chance to meet and see if we're a good fit.",
+    b1h:"The person before the technique",
+    b1p:"Tools help, but what transforms is the relationship. That's why I show up as a person, not just as a professional.",
+    b2h:"A crisis is also a door",
+    b2p:"What overwhelms you today often points to exactly what needs attention. We don't cover it up: we listen to it.",
+    b3h:"Healing is a way of living",
+    b3p:"The aim isn't for you to fit in better, but to live with more truth, more presence and more enjoyment too.",
+    bk2b:"Book an in-person session",
+    bk1b:"Start with a free 15-minute call",
+    bk1c:"Free 15-minute call",
+    bk2c:"Book an in-person session"
   }
 };
 const nodes = [...document.querySelectorAll("[data-i18n]")];
