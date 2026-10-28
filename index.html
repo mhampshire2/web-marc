@@ -88,6 +88,8 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:co
 /* Hero */
 .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,6vw,80px);align-items:center;padding-block:clamp(48px,8vw,96px)}
 .hero h1{font-size:clamp(2.7rem,6.4vw,5rem);letter-spacing:-.01em}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}.gallery figure{margin:0}.gallery img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:14px}.gallery figcaption{font-size:.82rem;color:var(--muted);margin-top:6px}
+.areas h3 a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 .hero-copy{display:grid;gap:26px;min-width:0}
 .hero-copy .lead{font-size:1.15rem;max-width:34em;color:var(--muted)}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px}
@@ -312,10 +314,10 @@ footer{padding-block:40px 110px;font-size:.88rem;color:var(--muted);display:flex
       </div>
       <ul class="areas">
         <li><h3 data-i18n="a1h">Relaciones</h3><p data-i18n="a1p">Dificultades en tus relaciones (de pareja, familiares o de otro tipo), patrones que se repiten, dependencia emocional y codependencia. Trabajo con terapia individual.</p></li>
-        <li><h3 data-i18n="a2h">Ansiedad y estrés</h3><p data-i18n="a2p">Preocupación constante, crisis de ansiedad, dificultades para dormir o tensión física.</p></li>
+        <li><h3 data-i18n="a2h"><a href="/psicologo-ansiedad-barcelona.html">Ansiedad y estrés</a></h3><p data-i18n="a2p">Preocupación constante, crisis de ansiedad, dificultades para dormir o tensión física.</p></li>
         <li><h3 data-i18n="a3h">Adicciones</h3><p data-i18n="a3p">Consumo problemático de alcohol u otras sustancias y conductas compulsivas.</p></li>
         <li><h3 data-i18n="a4h">Autoestima</h3><p data-i18n="a4p">Autocrítica excesiva, inseguridad y sensación de no ser suficiente.</p></li>
-        <li><h3 data-i18n="a5h">Duelo</h3><p data-i18n="a5p">Pérdidas, rupturas y cambios vitales difíciles de procesar.</p></li>
+        <li><h3 data-i18n="a5h"><a href="/psicologo-duelo-barcelona.html">Duelo</a></h3><p data-i18n="a5p">Pérdidas, rupturas y cambios vitales difíciles de procesar.</p></li>
         <li><h3 data-i18n="a6h">Trauma</h3><p data-i18n="a6p">Experiencias traumáticas cuyos efectos siguen presentes: hipervigilancia, evitación o recuerdos intrusivos.</p></li>
         <li><h3 data-i18n="a7h">Hombres</h3><p data-i18n="a7p">Gestión emocional, vulnerabilidad y relaciones, en sesión individual o en grupo.</p></li>
         <li><h3 data-i18n="a8h">Patrones de personalidad</h3><p data-i18n="a8p">Rasgos rígidos de personalidad, incluidos rasgos narcisistas, que generan malestar propio o en los demás.</p></li>
@@ -371,6 +373,10 @@ footer{padding-block:40px 110px;font-size:.88rem;color:var(--muted);display:flex
           <li><b data-i18n="c3b">Bilingüe</b><span data-i18n="c3">Inglés y castellano nativos</span></li>
           <li><b data-i18n="c4b">5 años</b><span data-i18n="c4">de experiencia clínica</span></li>
         </ul>
+        <div class="gallery">
+          <figure><img src="/consulta-sala.webp" alt="Clínica ART, Eixample, Barcelona" width="720" height="960" loading="lazy" decoding="async"><figcaption data-i18n="ph1">Sala de consulta en Clínica ART (Diputació 176)</figcaption></figure>
+          <figure><img src="/consulta-espera.webp" alt="Clínica ART, Eixample, Barcelona" width="720" height="960" loading="lazy" decoding="async"><figcaption data-i18n="ph2">Sala de espera</figcaption></figure>
+        </div>
       </div>
     </div>
   </section>
@@ -505,7 +511,7 @@ const T = {
     s5h:"Sobre mi",
     ab1:"Sóc psicòleg general sanitari, col·legiat al Col·legi Oficial de Psicologia de Catalunya (núm. 30868), amb el Màster en Psicologia General Sanitària i cinc anys d'experiència clínica.",
     ab2:"Sóc mig anglès, així que parlo anglès i castellà com a llengües natives, a més de català: pots fer teràpia en l'idioma en què et sentis més còmode. Atenc a la meva consulta del carrer Diputació i a la Clínica ART, i condueixo un grup terapèutic per a homes.",
-    c1:"Col·legiat núm. 30868",c2:"Màster en Psicologia General Sanitària",c3:"Anglès i castellà natius",c4b:"5 anys",c4:"d'experiència clínica",
+    c1:"Col·legiat núm. 30868",c2:"Màster en Psicologia General Sanitària",c3:"Anglès i castellà natius",c4b:"5 anys",c4:"d'experiència clínica",ph1:"Sala de consulta a Clínica ART (Diputació 176)",ph2:"Sala d'espera",
     s6h:"Parlem",s6p:"Si no saps si la teràpia és per a tu, la trucada gratuïta serveix precisament per a això. També em pots escriure i et respondré tan aviat com pugui.",
     cta1b:"Escriure per WhatsApp",d1:"Telèfon i WhatsApp",copy:"Copiar",copy2:"Copiar",d2:"Consulta",d3:"També a la Clínica ART",d4:"En línia",d4v:"Per videotrucada, des de qualsevol lloc d'Espanya.",
     foot:"Col·legiat núm. 30868 · Col·legi Oficial de Psicologia de Catalunya",fab:"Trucada gratis",copied:"Copiat",
@@ -606,7 +612,7 @@ const T = {
     s5h:"About me",
     ab1:"I'm a licensed health psychologist registered with the Official College of Psychology of Catalonia (no. 30868), with a Master's in General Health Psychology (MPGS) and five years of clinical experience.",
     ab2:"I'm half English, so English and Spanish are both native languages for me, and I also speak Catalan: you can do therapy in whichever language feels most comfortable. I see clients at my practice on Carrer de la Diputació and at Clínica ART, and I also lead a therapy group for men.",
-    c1:"Registration no. 30868",c2:"Master's in General Health Psychology",c3:"Native English and Spanish",c4b:"5 years",c4:"of clinical experience",
+    c1:"Registration no. 30868",c2:"Master's in General Health Psychology",c3:"Native English and Spanish",c4b:"5 years",c4:"of clinical experience",ph1:"Consulting room at Clínica ART (Diputació 176)",ph2:"Waiting area",
     s6h:"Let's talk",s6p:"If you're not sure therapy is for you, that's exactly what the free call is for. You can also message me and I'll reply as soon as I can.",
     cta1b:"Message on WhatsApp",d1:"Phone and WhatsApp",copy:"Copy",copy2:"Copy",d2:"Practice",d3:"Also at Clínica ART",d4:"Online",d4v:"By video call, from anywhere in Spain.",
     foot:"COPC registration no. 30868 · Official College of Psychology of Catalonia",fab:"Free call",copied:"Copied",
