@@ -1,6 +1,26 @@
 // Content for the service landing pages (English and Spanish)
 const PRICE_EN = ['Individual therapy', '€70', 'The first three sessions last an hour; after that, 45 to 50 minutes.'];
 const PRICE_ES = ['Terapia individual', '70 €', 'Las tres primeras sesiones duran una hora; después, de 45 a 50 minutos.'];
+const PROCESS_ES = {
+  h: 'Cómo es el proceso',
+  p: [
+    'Trabajo con un proceso de exploración, no con parches ni soluciones rápidas: primero entendemos qué te pasa y por qué se repite; después fijamos objetivos juntos.',
+    '<strong>Sesiones 1 a 3:</strong> son de exploración y duran una hora. Hablamos del motivo de consulta, de tu historia y de cómo vives lo que te pasa. No hay prisa por resolver nada.',
+    '<strong>Sesión 4:</strong> establecemos objetivos y forma de trabajo. Los objetivos orientan el proceso, pero no lo agotan: seguimos explorando.',
+    'Suele ser un trabajo de duración media o larga, aunque también atiendo crisis puntuales.'
+  ]
+};
+const PROCESS_EN = {
+  h: 'What the process looks like',
+  p: [
+    "I work through a process of exploration, not patches or quick fixes: first we understand what's happening and why it keeps repeating; then we set goals together.",
+    "<strong>Sessions 1 to 3:</strong> exploratory, one hour each. We look at what brings you, your history and how you experience what's happening. There's no rush to solve anything.",
+    "<strong>Session 4:</strong> we agree on goals and a way of working. The goals guide the process but don't exhaust it: we keep exploring.",
+    "It's usually medium to long-term work, though I also see people for an acute crisis."
+  ]
+};
+const WHERE_ES = 'En mi consulta de Carrer de la Diputació 153 y en Clínica ART (Carrer de la Diputació 176), ambas en el Eixample, o por videollamada desde cualquier lugar de España.';
+const WHERE_EN = 'At my practice on Carrer de la Diputació 153 and at Clínica ART (Carrer de la Diputació 176), both in the Eixample, or by video call from anywhere in Spain.';
 const CRISIS_EN = "If you're in crisis or worried about your safety, call 112 (emergencies) or 024 (Spain's suicide prevention line, free and available 24 hours).";
 const CRISIS_ES = 'Si estás en crisis o te preocupa tu seguridad, llama al 112 (emergencias) o al 024 (línea de atención a la conducta suicida, gratuita y disponible las 24 horas).';
 
@@ -71,14 +91,17 @@ module.exports = [
           "My approach is integrative and based on Gestalt therapy, with tools from cognitive behavioural therapy and attachment theory. Sessions can be entirely in English, or move between English and Spanish if you're learning the language and want to.",
           'I also work with international students, including online sessions from anywhere in Spain.'
         ]
-      }
+      },
+      PROCESS_EN
     ],
     price: PRICE_EN,
     faq: [
       ["Can I start therapy if I don't speak Spanish?", 'Yes. The whole process can be in English: the first call, sessions, messages and invoices.'],
       ['Do you work with international students?', 'Yes. Many students come to therapy for stress, loneliness, homesickness or decisions about the future.'],
       ['I live outside Barcelona. Can we work online?', 'Yes, by video call from anywhere in Spain.'],
-      ['Can you provide invoices for my insurance?', 'I provide an invoice for every session. Whether it is reimbursed depends on your insurer, so check your policy first.']
+      ['Can you provide invoices for my insurance?', 'I provide an invoice for every session. Whether it is reimbursed depends on your insurer, so check your policy first.'],
+      ['Where are sessions held?', WHERE_EN],
+      ['How long does therapy take?', "It's usually a medium to long process. The first three sessions are exploratory and in the fourth we set goals; from there we review progress together. I don't offer quick fixes, but I can also see you for an acute crisis."]
     ]
   },
   {
@@ -232,8 +255,8 @@ module.exports = [
     lang: 'es',
     file: 'psicologo-ansiedad-barcelona.html',
     alt: { en: 'anxiety-therapy-in-english.html' },
-    title: 'Psicólogo para la ansiedad en Barcelona (Eixample) | Marc Hampshire',
-    desc: 'Psicólogo para ansiedad, estrés y ataques de pánico en el Eixample, Barcelona, y online en toda España. En castellano, catalán o inglés. Llamada gratuita.',
+    title: 'Psicólogo de ansiedad en Barcelona (Eixample) | Marc Hampshire',
+    desc: 'Psicólogo de ansiedad en el Eixample, Barcelona: terapia para el estrés, la preocupación constante y los ataques de pánico. Online en toda España. 70 €. Llamada gratuita.',
     crumb: 'Psicólogo para la ansiedad',
     h1: 'Psicólogo para la ansiedad en Barcelona',
     lead: 'Terapia para la ansiedad, el estrés y los ataques de pánico con un psicólogo general sanitario colegiado. En consulta en el Eixample o por videollamada desde cualquier lugar de España.',
@@ -256,7 +279,8 @@ module.exports = [
           'Combino la terapia Gestalt, que ayuda a darte cuenta de lo que ocurre en tu cuerpo y tu mente en el momento, con herramientas de la terapia cognitivo-conductual y del mindfulness: entender el pensamiento ansioso, afrontar poco a poco lo que evitas y aprender a calmar el sistema nervioso. Los ataques de pánico y la ansiedad generalizada responden bien a la terapia psicológica.',
           'Como psicólogo no receto medicación. Si es útil, puedo sugerirte que lo consultes con tu médico de cabecera o con un psiquiatra a la vez que haces terapia.'
         ]
-      }
+      },
+      PROCESS_ES
     ],
     note: CRISIS_ES,
     price: PRICE_ES,
@@ -264,15 +288,17 @@ module.exports = [
       ['¿Necesito un diagnóstico para empezar?', 'No. Basta con sentir que algo no va bien y que quieres ayuda.'],
       ['¿Cuánto dura la terapia para la ansiedad?', 'Es un proceso de duración media o larga, normalmente de varios meses o más: entender qué mantiene la ansiedad requiere tiempo y no ofrezco soluciones rápidas. Revisamos el avance juntos y también puedo atender una crisis puntual.'],
       ['¿Se puede hacer online?', 'Sí, por videollamada desde cualquier lugar de España. Solo necesitas un espacio tranquilo y privado.'],
-      ['Ya tomo medicación. ¿Puedo hacer terapia?', 'Sí. Es habitual combinar terapia y medicación. Solo dímelo para tenerlo en cuenta.']
+      ['Ya tomo medicación. ¿Puedo hacer terapia?', 'Sí. Es habitual combinar terapia y medicación. Solo dímelo para tenerlo en cuenta.'],
+      ['¿Dónde son las sesiones?', WHERE_ES],
+      ['¿Cuánto cuesta una sesión?', '70 € por sesión individual. Las tres primeras duran una hora; después, de 45 a 50 minutos.']
     ]
   },
   {
     lang: 'es',
     file: 'psicologo-duelo-barcelona.html',
     alt: { en: 'grief-counselling-in-english.html' },
-    title: 'Psicólogo para el duelo en Barcelona (Eixample) | Marc Hampshire',
-    desc: 'Terapia de duelo en el Eixample, Barcelona, y online: muerte de un ser querido, rupturas y cambios vitales. En castellano, catalán o inglés.',
+    title: 'Psicólogo de duelo en Barcelona (Eixample) | Terapia de duelo',
+    desc: 'Psicólogo de duelo en el Eixample, Barcelona, y online: muerte de un ser querido, duelo a distancia, rupturas. Castellano, catalán o inglés. 70 €. Llamada gratuita.',
     crumb: 'Psicólogo para el duelo',
     h1: 'Psicólogo para el duelo en Barcelona',
     lead: 'Acompañamiento tras la muerte de alguien cercano, una ruptura o un gran cambio vital. Con un psicólogo general sanitario colegiado, en el Eixample o por videollamada.',
@@ -293,7 +319,8 @@ module.exports = [
           'El duelo no es algo que haya que arreglar ni acelerar. En terapia hacemos espacio a lo que sientes, también a lo que cuesta decir en otros sitios: rabia, culpa, alivio o insensibilidad.',
           'La terapia Gestalt tiene formas específicas de trabajar lo que quedó sin decir y la despedida. Con el tiempo, el objetivo no es olvidar, sino poder llevar la pérdida de una forma que te deje seguir viviendo.'
         ]
-      }
+      },
+      PROCESS_ES
     ],
     note: CRISIS_ES,
     price: PRICE_ES,
@@ -301,14 +328,17 @@ module.exports = [
       ['¿Cómo sé si necesito ayuda con el duelo?', 'No hay un tiempo correcto. Puede ayudarte hablar con alguien si el dolor interfiere en tu día a día, si sientes que te has quedado atascado o si no tienes otro espacio donde vivirlo.'],
       ['¿Es demasiado pronto, o demasiado tarde, para empezar?', 'Ninguna de las dos cosas. Hay quien viene las primeras semanas y quien viene años después.'],
       ['¿Se puede hacer online?', 'Sí, por videollamada desde cualquier lugar de España.'],
-      ['¿También trabajas el duelo tras una ruptura?', 'Sí. Perder una relación también es una pérdida y merece el mismo cuidado.']
+      ['¿También trabajas el duelo tras una ruptura?', 'Sí. Perder una relación también es una pérdida y merece el mismo cuidado.'],
+      ['¿Cuánto dura la terapia de duelo?', 'Suele ser un proceso de duración media o larga. Las tres primeras sesiones son de exploración y en la cuarta fijamos objetivos; a partir de ahí revisamos juntos cómo avanza. Si estás en un momento agudo justo después de una pérdida, también puedo atenderte en una crisis puntual.'],
+      ['¿Dónde son las sesiones?', WHERE_ES],
+      ['¿Cuánto cuesta una sesión?', '70 € por sesión individual. Las tres primeras duran una hora; después, de 45 a 50 minutos.']
     ]
   },
   {
     lang: 'es',
     file: 'psicologo-eixample.html',
     title: 'Psicólogo en el Eixample, Barcelona | Marc Hampshire',
-    desc: 'Consulta de psicología en Carrer de la Diputació 153, Eixample (metro Urgell). Terapia individual en castellano, catalán o inglés. 70 €. Llamada gratuita.',
+    desc: 'Psicólogo en el Eixample: consulta en Carrer de la Diputació 153 (metro Urgell) y en Clínica ART (Diputació 176). Terapia individual en castellano, catalán o inglés. 70 €.',
     crumb: 'Psicólogo en el Eixample',
     h1: 'Psicólogo en el Eixample, Barcelona',
     lead: 'Atiendo en Carrer de la Diputació 153, en el Eixample, a pocos minutos a pie del metro Urgell. Terapia individual para adolescentes, adultos y mayores de 65, en castellano, catalán o inglés.',
@@ -329,6 +359,7 @@ module.exports = [
         p: [
           '<strong>Dirección:</strong> Carrer de la Diputació 153, 08011 Barcelona. <a href="https://www.google.com/maps/search/?api=1&amp;query=Marc+Hampshire+Psic%C3%B3logo&amp;query_place_id=ChIJhSbvF2-jpBIR5Y-FHlcnc84" target="_blank" rel="noopener">Ver en Google Maps</a>.',
           '<strong>Metro:</strong> Urgell (L1), a pocos minutos a pie.',
+          '<strong>También en Clínica ART:</strong> Carrer de la Diputació 176, 08011 Barcelona, también en el Eixample.',
           '<strong>Horario:</strong> de martes a jueves, de 16:00 a 21:00, y los viernes, de 15:00 a 19:30.',
           'Si no puedes venir, las sesiones también pueden ser por videollamada desde cualquier lugar de España.'
         ]
@@ -339,7 +370,8 @@ module.exports = [
       ['¿Cómo pido la primera cita?', 'Puedes reservar una llamada gratuita de 15 minutos, reservar directamente una sesión presencial o escribirme por WhatsApp.'],
       ['¿Atiendes en catalán o en inglés?', 'Sí. Hablo castellano e inglés como lenguas nativas, y también catalán.'],
       ['¿Cómo se paga?', 'Por transferencia o Bizum, y recibes factura de cada sesión.'],
-      ['¿Trabajas con adolescentes?', 'Sí, con adolescentes, adultos y personas mayores de 65 años.']
+      ['¿Trabajas con adolescentes?', 'Sí, con adolescentes, adultos y personas mayores de 65 años.'],
+      ['¿Cuánto dura una terapia?', 'Es un proceso de duración media o larga: las tres primeras sesiones son de exploración y en la cuarta fijamos objetivos. No trabajo con soluciones rápidas, aunque también atiendo crisis puntuales.']
     ]
   }
 ];
