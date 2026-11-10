@@ -135,6 +135,10 @@ section.block{padding-block:clamp(56px,8vw,104px);border-top:1px solid var(--lin
 .review-themes{display:grid;gap:10px;margin:22px 0 0;padding:0;list-style:none}
 .review-themes li{display:flex;gap:10px;align-items:baseline;color:var(--muted)}
 .review-themes li::before{content:"\2605";color:var(--brass)}
+.review-quotes{display:grid;gap:14px;margin:26px 0 0;padding:0;list-style:none}
+.review-quotes li{border-left:2px solid var(--accent);padding-left:14px}
+.review-quotes blockquote{margin:0;font-family:var(--display);font-size:1.05rem;line-height:1.4}
+.review-quotes cite{display:block;margin-top:4px;font-style:normal;font-size:.85rem;color:var(--muted)}
 @media (max-width:860px){.reviews{grid-template-columns:1fr}}
 /* Areas */
 .areas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(24px,5vw,64px);margin-top:44px;padding:0;list-style:none}
@@ -319,7 +323,6 @@ footer{padding-block:40px 110px;font-size:.88rem;color:var(--muted);display:flex
         <li><h3 data-i18n="a4h">Self-esteem</h3><p data-i18n="a4p">Harsh self-criticism, insecurity and a sense of not being enough.</p></li>
         <li><h3 data-i18n="a5h"><a href="/grief-counselling-in-english.html">Grief</a></h3><p data-i18n="a5p">Losses, break-ups and life changes that are hard to process.</p></li>
         <li><h3 data-i18n="a6h">Trauma</h3><p data-i18n="a6p">Traumatic experiences whose effects are still present: hypervigilance, avoidance or intrusive memories.</p></li>
-        <li><h3 data-i18n="a7h">Men</h3><p data-i18n="a7p">Emotional regulation, vulnerability and relationships, individually or in a group.</p></li>
         <li><h3 data-i18n="a8h">Personality patterns</h3><p data-i18n="a8p">Rigid personality traits, including narcissistic traits, that cause distress to you or those around you.</p></li>
         <li><h3 data-i18n="a9h"><a href="/burnout-therapy-in-english.html">Stress and burnout</a></h3><p data-i18n="a9p">Work overload, trouble switching off and the feeling of never getting on top of things.</p></li>
         <li><h3 data-i18n="a10h">Expats</h3><p data-i18n="a10p">Adjusting to a new country, loneliness, identity and long-distance relationships. Therapy in English or Spanish.</p></li>
@@ -336,14 +339,12 @@ footer{padding-block:40px 110px;font-size:.88rem;color:var(--muted);display:flex
       </div>
       <div class="sessions">
         <div class="session"><h3 data-i18n="p1h">Individual therapy</h3><span class="price">70 €</span><p data-i18n="p1p">For teenagers, adults and people over 65.</p></div>
-        <div class="session"><h3 data-i18n="p3h">Men's group</h3><p data-i18n="p3p">Fortnightly therapy group, Tuesdays from 6:30 to 8:00 pm. Message me to ask about places.</p></div>
       </div>
       <div class="book-row">
         <a class="btn btn-primary" href="https://calendar.app.google/gUtvc1tR1LRQqWUb9" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#cal"/></svg><span data-i18n="bk2b">Book an in-person session</span></a>
         <a class="btn btn-ghost" href="https://calendar.app.google/8UB1FcW1vVtsC4eD9" target="_blank" rel="noopener" data-i18n="bk1b">Start with a free 15-minute call</a>
       </div>
       <div class="fine">
-        <p data-i18n="fine1">If the fee is a barrier, let me know: I offer a sliding scale.</p>
         <p data-i18n="fine2">You can pay by bank transfer, card, PayPal or cash. Invoices available.</p>
       </div>
     </div>
@@ -366,7 +367,7 @@ footer{padding-block:40px 110px;font-size:.88rem;color:var(--muted);display:flex
       <h2 data-i18n="s5h">About me</h2>
       <div class="about">
         <p data-i18n="ab1">I'm a licensed health psychologist registered with the Official College of Psychology of Catalonia (no. 30868), with a Master's in General Health Psychology (MPGS) and five years of clinical experience.</p>
-        <p data-i18n="ab2">I'm half English, so English and Spanish are both native languages for me, and I also speak Catalan: you can do therapy in whichever language feels most comfortable. I see clients at my practice on Carrer de la Diputació and at Clínica ART, and I also lead a therapy group for men.</p>
+        <p data-i18n="ab2">I'm half English, so English and Spanish are both native languages for me, and I also speak Catalan: you can do therapy in whichever language feels most comfortable. I see clients at my practice on Carrer de la Diputació and at Clínica ART.</p>
         <ul class="creds">
           <li><b>COPC</b><span data-i18n="c1">Registration no. 30868</span></li>
           <li><b>MPGS</b><span data-i18n="c2">Master's in General Health Psychology</span></li>
@@ -374,8 +375,8 @@ footer{padding-block:40px 110px;font-size:.88rem;color:var(--muted);display:flex
           <li><b data-i18n="c4b">5 years</b><span data-i18n="c4">of clinical experience</span></li>
         </ul>
         <div class="gallery">
-          <figure><img src="/consulta-sala.webp" alt="Clínica ART, Eixample, Barcelona" width="720" height="960" loading="lazy" decoding="async"><figcaption data-i18n="ph1">Consulting room at Clínica ART (Diputació 176)</figcaption></figure>
-          <figure><img src="/consulta-espera.webp" alt="Clínica ART, Eixample, Barcelona" width="720" height="960" loading="lazy" decoding="async"><figcaption data-i18n="ph2">Waiting area</figcaption></figure>
+          <figure><img src="/consulta-sala.webp" alt="Sala de consulta de psicología en Clínica ART, Carrer de la Diputació 176, Eixample, Barcelona" width="720" height="960" loading="lazy" decoding="async"><figcaption data-i18n="ph1">Consulting room at Clínica ART (Diputació 176)</figcaption></figure>
+          <figure><img src="/consulta-espera.webp" alt="Sala de espera de Clínica ART en el Eixample de Barcelona" width="720" height="960" loading="lazy" decoding="async"><figcaption data-i18n="ph2">Waiting area</figcaption></figure>
         </div>
       </div>
     </div>
@@ -390,6 +391,12 @@ footer{padding-block:40px 110px;font-size:.88rem;color:var(--muted);display:flex
           <li data-i18n="rv1">Feeling truly heard, without judgement</li>
           <li data-i18n="rv2">Practical tools they keep using afterwards</li>
           <li data-i18n="rv3">A warm, honest and direct approach</li>
+        </ul>
+        <ul class="review-quotes">
+          <li><blockquote>«Marc es muy atento, paciente y respetuoso.»</blockquote><cite>M.T.B.</cite></li>
+          <li><blockquote>«Excelente y muy honesto, dice las cosas tal cual son.»</blockquote><cite>E.S.R.</cite></li>
+          <li><blockquote>«Supo entender lo que necesitaba, recomiendo 100%.»</blockquote><cite>S.</cite></li>
+          <li><blockquote>«Una gran capacidad de escucha y guía, muy recomendable.»</blockquote><cite>B.P.</cite></li>
         </ul>
       </div>
       <div class="widget">
@@ -462,7 +469,7 @@ footer{padding-block:40px 110px;font-size:.88rem;color:var(--muted);display:flex
 
 <div class="wrap">
   <footer>
-    <nav aria-label="Services" style="flex-basis:100%;line-height:1.9"><b>Services:</b> <a href="/anxiety-therapy-in-english.html">Anxiety therapy in English</a> · <a href="/therapy-for-expats.html">Therapy for expats</a> · <a href="/depression-therapy-in-english.html">Depression therapy in English</a> · <a href="/burnout-therapy-in-english.html">Burnout therapy in English</a> · <a href="/grief-counselling-in-english.html">Grief counselling in English</a> · <a href="/online-therapy-in-english-spain.html">Online therapy in English in Spain</a> · <a href="/psicologo-ansiedad-barcelona.html" hreflang="es">Psicólogo para la ansiedad</a> · <a href="/psicologo-duelo-barcelona.html" hreflang="es">Psicólogo para el duelo</a> · <a href="/psicologo-eixample.html" hreflang="es">Psicólogo en el Eixample</a></nav>
+    <nav aria-label="Services" style="flex-basis:100%;line-height:1.9"><b>Services:</b> <a href="/anxiety-therapy-in-english.html">Anxiety therapy in English</a> · <a href="/therapy-for-expats.html">Therapy for expats</a> · <a href="/depression-therapy-in-english.html">Depression therapy in English</a> · <a href="/burnout-therapy-in-english.html">Burnout therapy in English</a> · <a href="/grief-counselling-in-english.html">Grief counselling in English</a> · <a href="/online-therapy-in-english-spain.html">Online therapy in English in Spain</a> · <a href="/psicologo-ansiedad-barcelona.html" hreflang="es">Psicólogo para la ansiedad</a> · <a href="/psicologo-duelo-barcelona.html" hreflang="es">Psicólogo para el duelo</a> · <a href="/psicologo-eixample.html" hreflang="es">Psicólogo en el Eixample</a> · <a href="/psicologo-autoestima-barcelona.html" hreflang="es">Psicólogo para la autoestima</a> · <a href="/psicologo-relaciones-pareja-barcelona.html" hreflang="es">Psicólogo para relaciones y pareja</a> · <a href="/psicologo-estres-burnout-barcelona.html" hreflang="es">Psicólogo para el estrés y el burnout</a></nav>
       <span>© 2026 Marc Hampshire Viñamata</span>
     <span data-i18n="foot">COPC registration no. 30868 · Official College of Psychology of Catalonia</span>
   </footer>
@@ -495,13 +502,11 @@ const T = {
     a4h:"Autoestima",a4p:"Autocrítica excessiva, inseguretat i sensació de no ser prou.",
     a5h:"Dol",a5p:"Pèrdues, ruptures i canvis vitals difícils de processar.",
     a6h:"Trauma",a6p:"Experiències traumàtiques els efectes de les quals continuen presents: hipervigilància, evitació o records intrusius.",
-    a7h:"Homes",a7p:"Gestió emocional, vulnerabilitat i relacions, en sessió individual o en grup.",
     a8h:"Patrons de personalitat",a8p:"Trets rígids de personalitat, inclosos trets narcisistes, que generen malestar propi o en els altres.",
     s3h:"Sessions i preus",s3p:"Les tres primeres sessions duren una hora; després, entre 45 i 50 minuts. Totes les sessions poden ser presencials a Barcelona o en línia, en l'idioma que prefereixis.",
     p1h:"Teràpia individual",p1p:"Per a adolescents, adults i majors de 65 anys.",
     
-    p3h:"Grup d'homes",per:"/ sessió",p3p:"Grup terapèutic quinzenal, els dimarts de 18:30 a 20:00. Escriu-me per consultar places.",
-    fine1:"Si el preu és un obstacle, comenta-m'ho: tinc tarifa adaptada.",
+    per:"/ sessió",
     fine2:"Pots pagar per transferència, targeta, PayPal o en efectiu. Faig factura.",
     s4h:"Com començar",
     st1h:"Trucada inicial gratuïta",st1p:"<a href=\"https://calendar.app.google/8UB1FcW1vVtsC4eD9\" target=\"_blank\" rel=\"noopener\">Reserva 15 minuts</a> per explicar-me breument què et passa i resoldre dubtes. També em pots escriure per WhatsApp.",
@@ -510,7 +515,7 @@ const T = {
     st4h:"Tractament",st4p:"Sessions de 45 a 50 minuts amb la freqüència acordada. És el treball en profunditat, que revisem periòdicament junts.",
     s5h:"Sobre mi",
     ab1:"Sóc psicòleg general sanitari, col·legiat al Col·legi Oficial de Psicologia de Catalunya (núm. 30868), amb el Màster en Psicologia General Sanitària i cinc anys d'experiència clínica.",
-    ab2:"Sóc mig anglès, així que parlo anglès i castellà com a llengües natives, a més de català: pots fer teràpia en l'idioma en què et sentis més còmode. Atenc a la meva consulta del carrer Diputació i a la Clínica ART, i condueixo un grup terapèutic per a homes.",
+    ab2:"Sóc mig anglès, així que parlo anglès i castellà com a llengües natives, a més de català: pots fer teràpia en l'idioma en què et sentis més còmode. Atenc a la meva consulta del carrer Diputació i a la Clínica ART.",
     c1:"Col·legiat núm. 30868",c2:"Màster en Psicologia General Sanitària",c3:"Anglès i castellà natius",c4b:"5 anys",c4:"d'experiència clínica",ph1:"Sala de consulta a Clínica ART (Diputació 176)",ph2:"Sala d'espera",
     s6h:"Parlem",s6p:"Si no saps si la teràpia és per a tu, la trucada gratuïta serveix precisament per a això. També em pots escriure i et respondré tan aviat com pugui.",
     cta1b:"Escriure per WhatsApp",d1:"Telèfon i WhatsApp",copy:"Copiar",copy2:"Copiar",d2:"Consulta",d3:"També a la Clínica ART",d4:"En línia",d4v:"Per videotrucada, des de qualsevol lloc d'Espanya.",
@@ -596,13 +601,11 @@ const T = {
     a4h:"Self-esteem",a4p:"Harsh self-criticism, insecurity and a sense of not being enough.",
     a5h:"Grief",a5p:"Losses, break-ups and life changes that are hard to process.",
     a6h:"Trauma",a6p:"Traumatic experiences whose effects are still present: hypervigilance, avoidance or intrusive memories.",
-    a7h:"Men",a7p:"Emotional regulation, vulnerability and relationships, individually or in a group.",
     a8h:"Personality patterns",a8p:"Rigid personality traits, including narcissistic traits, that cause distress to you or those around you.",
     s3h:"Sessions and fees",s3p:"The first three sessions last an hour; after that, 45 to 50 minutes. All sessions can be in person in Barcelona or online, in the language you prefer.",
     p1h:"Individual therapy",p1p:"For teenagers, adults and people over 65.",
     
-    p3h:"Men's group",per:"/ session",p3p:"Fortnightly therapy group, Tuesdays from 6:30 to 8:00 pm. Message me to ask about places.",
-    fine1:"If the fee is a barrier, let me know: I offer a sliding scale.",
+    per:"/ session",
     fine2:"You can pay by bank transfer, card, PayPal or cash. Invoices available.",
     s4h:"How to start",
     st1h:"Free initial call",st1p:"<a href=\"https://calendar.app.google/8UB1FcW1vVtsC4eD9\" target=\"_blank\" rel=\"noopener\">Book 15 minutes</a> to briefly tell me what's going on and ask any questions. You can also message me on WhatsApp.",
@@ -611,7 +614,7 @@ const T = {
     st4h:"Treatment",st4p:"Sessions of 45 to 50 minutes at the agreed frequency. This is the in-depth work, which we review together regularly.",
     s5h:"About me",
     ab1:"I'm a licensed health psychologist registered with the Official College of Psychology of Catalonia (no. 30868), with a Master's in General Health Psychology (MPGS) and five years of clinical experience.",
-    ab2:"I'm half English, so English and Spanish are both native languages for me, and I also speak Catalan: you can do therapy in whichever language feels most comfortable. I see clients at my practice on Carrer de la Diputació and at Clínica ART, and I also lead a therapy group for men.",
+    ab2:"I'm half English, so English and Spanish are both native languages for me, and I also speak Catalan: you can do therapy in whichever language feels most comfortable. I see clients at my practice on Carrer de la Diputació and at Clínica ART.",
     c1:"Registration no. 30868",c2:"Master's in General Health Psychology",c3:"Native English and Spanish",c4b:"5 years",c4:"of clinical experience",ph1:"Consulting room at Clínica ART (Diputació 176)",ph2:"Waiting area",
     s6h:"Let's talk",s6p:"If you're not sure therapy is for you, that's exactly what the free call is for. You can also message me and I'll reply as soon as I can.",
     cta1b:"Message on WhatsApp",d1:"Phone and WhatsApp",copy:"Copy",copy2:"Copy",d2:"Practice",d3:"Also at Clínica ART",d4:"Online",d4v:"By video call, from anywhere in Spain.",

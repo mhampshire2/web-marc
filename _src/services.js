@@ -145,6 +145,7 @@ module.exports = [
   {
     lang: 'en',
     file: 'burnout-therapy-in-english.html',
+    alt: { es: 'psicologo-estres-burnout-barcelona.html' },
     title: 'Burnout & Work Stress Therapy in English | Barcelona & Online',
     desc: 'Therapy in English for burnout and work stress with a native-speaking psychologist in Barcelona or online across Spain. Evening sessions, free 15-min call.',
     crumb: 'Burnout therapy in English',
@@ -372,6 +373,130 @@ module.exports = [
       ['¿Cómo se paga?', 'Por transferencia o Bizum, y recibes factura de cada sesión.'],
       ['¿Trabajas con adolescentes?', 'Sí, con adolescentes, adultos y personas mayores de 65 años.'],
       ['¿Cuánto dura una terapia?', 'Es un proceso de duración media o larga: las tres primeras sesiones son de exploración y en la cuarta fijamos objetivos. No trabajo con soluciones rápidas, aunque también atiendo crisis puntuales.']
+    ]
+  },
+  {
+    lang: 'es',
+    file: 'psicologo-autoestima-barcelona.html',
+    title: 'Psicólogo para la autoestima en Barcelona (Eixample) | Marc Hampshire',
+    desc: 'Terapia para la autoestima en el Eixample, Barcelona, y online: autoexigencia, inseguridad, necesidad de aprobación y autocrítica. Castellano, catalán o inglés. 70 €.',
+    crumb: 'Psicólogo para la autoestima',
+    h1: 'Psicólogo para la autoestima en Barcelona',
+    lead: 'Para cuando te tratas con más dureza que a nadie, te cuesta poner límites o sientes que nunca es suficiente. Con un psicólogo general sanitario colegiado, en el Eixample o por videollamada.',
+    sections: [
+      {
+        h: 'Cuándo la autoestima pide atención',
+        list: [
+          ['Autoexigencia y perfeccionismo', 'Nada de lo que haces está del todo bien, descansar te genera culpa y los logros casi no se disfrutan.'],
+          ['Necesidad de aprobación', 'Te cuesta decir que no, te adaptas a lo que esperan los demás y luego no sabes muy bien qué quieres tú.'],
+          ['Compararte todo el rato', 'Con amigos, con compañeros o con lo que ves en redes, y siempre sales perdiendo.'],
+          ['Inseguridad en las relaciones', 'Miedo a molestar, a no estar a la altura o a que te dejen, y relaciones que te hacen sentir menos.'],
+          ['Una voz crítica que viene de lejos', 'Mensajes que aprendiste pronto y que todavía hoy marcan cómo te hablas.']
+        ]
+      },
+      {
+        h: 'Cómo trabajamos',
+        p: [
+          'La autoestima no se arregla repitiendo frases positivas. Se construye en la manera en que te relacionas contigo y con los demás, y eso lleva tiempo.',
+          'En terapia nos fijamos en cómo aparece esa voz crítica en tu día a día: qué te dice, de dónde viene y de qué intenta protegerte. Trabajo desde la terapia Gestalt y una mirada relacional y del apego, así que también prestamos atención a lo que ocurre en la propia sesión, que muchas veces es el primer lugar donde puedes probar a tratarte de otra manera.'
+        ]
+      },
+      PROCESS_ES
+    ],
+    note: CRISIS_ES,
+    price: PRICE_ES,
+    faq: [
+      ['¿Cómo sé si lo mío es un problema de autoestima?', 'Si a menudo te sientes insuficiente, dependes mucho de lo que piensen los demás o te cuesta reconocer lo que haces bien, vale la pena hablarlo. En la llamada gratuita lo vemos juntos.'],
+      ['¿Cuánto dura la terapia?', 'Suele ser un proceso de duración media o larga, sobre todo cuando la autocrítica viene de lejos. Las tres primeras sesiones son de exploración y en la cuarta fijamos objetivos; a partir de ahí revisamos juntos cómo avanza.'],
+      ['¿La autoestima tiene que ver con mis relaciones?', 'Muchas veces sí. Cómo te ves influye en cómo te vinculas, y al revés. Si es lo que más te preocupa, mira también la página de <a href="/psicologo-relaciones-pareja-barcelona.html">relaciones y pareja</a>.'],
+      ['¿Se puede hacer online?', 'Sí, por videollamada desde cualquier lugar de España.'],
+      ['¿Dónde son las sesiones?', WHERE_ES],
+      ['¿Cuánto cuesta una sesión?', '70 € por sesión individual. Las tres primeras duran una hora; después, de 45 a 50 minutos.']
+    ]
+  },
+  {
+    lang: 'es',
+    file: 'psicologo-relaciones-pareja-barcelona.html',
+    title: 'Psicólogo para relaciones y pareja en Barcelona | Terapia individual',
+    desc: 'Terapia individual para dificultades de pareja y relaciones en el Eixample, Barcelona, y online: dependencia emocional, celos, rupturas y patrones que se repiten. 70 €.',
+    crumb: 'Psicólogo para relaciones y pareja',
+    h1: 'Psicólogo para relaciones y pareja en Barcelona',
+    lead: 'Para cuando tus relaciones te generan más angustia que calma, o sientes que siempre acabas en el mismo sitio. Terapia individual con un psicólogo general sanitario colegiado, en el Eixample o por videollamada.',
+    sections: [
+      {
+        h: 'Qué se puede trabajar',
+        list: [
+          ['Patrones que se repiten', 'Parejas distintas y el mismo final, el mismo tipo de persona o el mismo papel.'],
+          ['Dependencia emocional', 'Sentir que no puedes estar bien sin la otra persona, o aguantar más de lo que querrías por miedo a perderla.'],
+          ['Celos e inseguridad', 'Dudas constantes, necesidad de comprobar y miedo a que te dejen.'],
+          ['Conflictos y comunicación', 'Discusiones que acaban siempre igual, cosas que no os decís o la sensación de que no te entiende.'],
+          ['Dudas y rupturas', 'No saber si seguir o dejarlo, o una ruptura que no consigues digerir.'],
+          ['Más allá de la pareja', 'Relaciones familiares, de amistad o de trabajo en las que te cuesta poner límites o mostrarte como eres.']
+        ]
+      },
+      {
+        h: 'Cómo trabajamos',
+        p: [
+          'La forma en que nos vinculamos se aprende pronto y tiende a repetirse. En terapia intentamos entender la tuya: qué buscas en los demás, qué temes y qué haces, a veces sin darte cuenta, para protegerte.',
+          'Trabajo desde la terapia Gestalt y el psicoanálisis relacional, con la teoría del apego como mapa. La propia relación terapéutica es parte del proceso: un sitio seguro donde notar esos patrones mientras ocurren y probar formas nuevas de estar con otra persona.',
+          'Trabajo en terapia individual: no hago terapia de pareja con los dos miembros. Si es lo que buscáis, en la llamada gratuita te puedo orientar.'
+        ]
+      },
+      PROCESS_ES
+    ],
+    note: 'Si sufres violencia en tu relación, puedes llamar al 016 (gratuito y confidencial, las 24 horas). En una emergencia, llama al 112.',
+    price: PRICE_ES,
+    faq: [
+      ['¿Haces terapia de pareja?', 'No. Mi trabajo es la terapia individual. Muchas dificultades de pareja se pueden trabajar desde uno mismo, y si necesitáis terapia de pareja te puedo orientar.'],
+      ['¿Me puede ayudar si mi pareja no quiere venir?', 'Sí. Cuando cambia tu manera de estar en la relación, la relación también se mueve.'],
+      ['¿Y si ahora no tengo pareja?', 'También. Muchas personas vienen precisamente porque les cuesta empezar o mantener una relación.'],
+      ['¿También trabajas las rupturas?', 'Sí. Perder una relación es una pérdida; puedes leer más en la página de <a href="/psicologo-duelo-barcelona.html">duelo</a>.'],
+      ['¿Se puede hacer online?', 'Sí, por videollamada desde cualquier lugar de España.'],
+      ['¿Dónde son las sesiones?', WHERE_ES],
+      ['¿Cuánto cuesta una sesión?', '70 € por sesión individual. Las tres primeras duran una hora; después, de 45 a 50 minutos.']
+    ]
+  },
+  {
+    lang: 'es',
+    file: 'psicologo-estres-burnout-barcelona.html',
+    alt: { en: 'burnout-therapy-in-english.html' },
+    title: 'Psicólogo para el estrés y el burnout en Barcelona (Eixample) | Marc Hampshire',
+    desc: 'Terapia para el estrés crónico y el burnout en el Eixample, Barcelona, y online: agotamiento, desconexión, insomnio y dificultad para parar. Horario de tarde. 70 €.',
+    crumb: 'Psicólogo para el estrés y el burnout',
+    h1: 'Psicólogo para el estrés y el burnout en Barcelona',
+    lead: 'Para cuando estás siempre cansado, el trabajo te desborda y ya no recuerdas cómo era descansar de verdad. Con un psicólogo general sanitario colegiado, en el Eixample o por videollamada, en horario de tarde.',
+    sections: [
+      {
+        h: 'Señales de que el estrés se ha vuelto demasiado',
+        list: [
+          ['Agotamiento que no se va', 'Descansas el fin de semana o en vacaciones y el cansancio sigue ahí.'],
+          ['Desconexión y cinismo', 'Lo que antes te importaba ahora te da igual o te irrita, y vas en piloto automático.'],
+          ['No poder parar', 'Revisas el correo fuera de horario, te cuesta decir que no y te sientes culpable si no produces.'],
+          ['Irritabilidad', 'Menos paciencia con tu pareja, tus amigos o contigo mismo.'],
+          ['El cuerpo avisa', 'Insomnio, tensión en cuello y hombros, dolores de cabeza, problemas digestivos o enfermar más a menudo.'],
+          ['Después de una baja', 'Volver al trabajo con miedo a que se repita, o no tener claro si quieres volver.']
+        ]
+      },
+      {
+        h: 'Cómo trabajamos',
+        p: [
+          'El burnout no aparece por ser débil ni por organizarte mal. Suele aparecer cuando lo que te exige el entorno y lo que te exiges tú se juntan durante demasiado tiempo.',
+          'En terapia miramos las dos partes: qué está sobrecargándote y qué te lleva a no parar, como la autoexigencia, la dificultad para poner límites o el miedo a decepcionar. Desde la terapia Gestalt y un enfoque integrador trabajamos para notar antes tus límites, recuperar un descanso que repare de verdad y tomar decisiones sobre el trabajo desde un lugar más claro. También uso herramientas prácticas de la terapia cognitivo-conductual y del mindfulness.',
+          'Atiendo de martes a viernes por la tarde, para que las sesiones encajen con una jornada laboral.'
+        ]
+      },
+      PROCESS_ES
+    ],
+    note: CRISIS_ES,
+    price: PRICE_ES,
+    faq: [
+      ['¿Qué diferencia hay entre estrés y burnout?', 'El estrés suele ir a picos, con momentos de alivio. En el burnout el agotamiento se vuelve crónico, aparecen la desconexión y la sensación de no rendir, y descansar ya no basta. La OMS lo reconoce como un fenómeno laboral, no como un diagnóstico médico.'],
+      ['¿Tengo que estar de baja para empezar?', 'No. Muchas personas empiezan terapia precisamente para no llegar a la baja.'],
+      ['¿Qué horarios tienes?', 'De martes a jueves, de 16:00 a 21:00, y los viernes, de 15:00 a 19:30.'],
+      ['¿Se enterará mi empresa?', 'No. La terapia es confidencial y las facturas se emiten a tu nombre.'],
+      ['¿Se puede hacer online?', 'Sí, por videollamada desde cualquier lugar de España. Si prefieres hacerla en inglés, mira <a href="/burnout-therapy-in-english.html">Burnout therapy in English</a>.'],
+      ['¿Dónde son las sesiones?', WHERE_ES],
+      ['¿Cuánto cuesta una sesión?', '70 € por sesión individual. Las tres primeras duran una hora; después, de 45 a 50 minutos.']
     ]
   }
 ];

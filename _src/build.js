@@ -27,7 +27,7 @@ for (const e of i18nElements(src)) T.es[e.key] = e.inner;
 const META = {
   es: {
     title: 'Psicólogo en Barcelona (Eixample) | Marc Hampshire',
-    desc: 'Psicólogo general sanitario en el Eixample y online en toda España. Terapia individual para ansiedad, duelo o autoestima, en castellano, catalán o inglés.',
+    desc: 'Psicólogo general sanitario en el Eixample y online en toda España. Terapia individual para ansiedad, autoestima, relaciones, duelo o burnout, en castellano, catalán o inglés.',
     locale: 'es_ES', job: 'Psicólogo general sanitario'
   },
   ca: {
@@ -273,7 +273,7 @@ function linkAreas(file, map) {
   for (const [key, url] of Object.entries(map)) h = h.replace(new RegExp('(<h3 data-i18n="' + key + '">)([^<]+)(</h3>)'), `$1<a href="${url}">$2</a>$3`);
   fs.writeFileSync(fp, h);
 }
-const ES_AREAS = { a2h: '/psicologo-ansiedad-barcelona.html', a5h: '/psicologo-duelo-barcelona.html' };
+const ES_AREAS = { a1h: '/psicologo-relaciones-pareja-barcelona.html', a2h: '/psicologo-ansiedad-barcelona.html', a4h: '/psicologo-autoestima-barcelona.html', a5h: '/psicologo-duelo-barcelona.html', a9h: '/psicologo-estres-burnout-barcelona.html' };
 linkAreas('index.html', ES_AREAS); linkAreas('ca.html', ES_AREAS);
 linkAreas('en.html', { a2h: '/anxiety-therapy-in-english.html', a5h: '/grief-counselling-in-english.html', a9h: '/burnout-therapy-in-english.html' });
 
