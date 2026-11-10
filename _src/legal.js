@@ -62,14 +62,14 @@ module.exports = [
 <h2>Qué datos trato</h2>
 <ul>
   <li><strong>Datos de contacto</strong> que me das al escribirme, llamarme o reservar una cita: nombre, teléfono, correo electrónico y el motivo de tu mensaje.</li>
-  <li><strong>Datos clínicos</strong> si iniciamos terapia: la información que compartes en las sesiones y las notas que forman tu historia clínica.</li>
+  <li><strong>Datos de salud</strong> si iniciamos terapia: la información que compartes en las sesiones y, cuando corresponda, las notas o informes que elabore.</li>
   <li><strong>Datos de facturación:</strong> nombre, NIF o documento de identidad y dirección, cuando son necesarios para emitir la factura.</li>
 </ul>
 
 <h2>Para qué y con qué base legal</h2>
 <ul>
   <li><strong>Responder a tus consultas y gestionar citas:</strong> tu consentimiento y las medidas previas a iniciar la terapia.</li>
-  <li><strong>Prestarte la atención psicológica y llevar tu historia clínica:</strong> la relación profesional que acordamos y la prestación de asistencia sanitaria por un profesional sujeto a secreto profesional (art. 9.2.h RGPD).</li>
+  <li><strong>Acompañarte en el proceso terapéutico:</strong> la relación profesional que acordamos y la prestación de asistencia sanitaria por un profesional sujeto a secreto profesional (art. 9.2.h RGPD).</li>
   <li><strong>Facturación y obligaciones fiscales:</strong> el cumplimiento de obligaciones legales.</li>
 </ul>
 <p>No uso tus datos para publicidad ni tomo decisiones automatizadas sobre ti.</p>
@@ -77,12 +77,12 @@ module.exports = [
 <h2>Cuánto tiempo los conservo</h2>
 <ul>
   <li><strong>Consultas que no llegan a iniciar terapia:</strong> el tiempo necesario para atenderlas, y como máximo un año.</li>
-  <li><strong>Historia clínica:</strong> el plazo que exige la normativa sanitaria catalana (Ley 21/2000), que es de un mínimo de 15 años desde el alta de cada proceso asistencial.</li>
+  <li><strong>Notas e informes de terapia:</strong> el plazo que exija la normativa sanitaria aplicable.</li>
   <li><strong>Facturas:</strong> el plazo que exige la normativa fiscal y mercantil.</li>
 </ul>
 
 <h2>Quién más puede acceder a ellos</h2>
-<p>Tus datos clínicos están protegidos por el secreto profesional y no se comunican a terceros salvo obligación legal o consentimiento expreso. Para gestionar la consulta uso proveedores que actúan como encargados del tratamiento:</p>
+<p>Lo que compartes en terapia está protegido por el secreto profesional y no se comunican a terceros salvo obligación legal o consentimiento expreso. Para gestionar la consulta uso proveedores que actúan como encargados del tratamiento:</p>
 <ul>
   <li>Google (correo y calendario de citas) y WhatsApp (mensajería), si eliges esas vías de contacto.</li>
   <li>Vercel (alojamiento de esta web).</li>
@@ -99,7 +99,7 @@ module.exports = [
 <p>Si tienes menos de 16 años, para iniciar terapia necesito el consentimiento de tus padres o tutores legales, salvo en los casos en que la ley te permite decidir por tu cuenta.</p>
 
 <h2>Tus derechos</h2>
-<p>Puedes pedirme el acceso a tus datos, su rectificación o supresión, la limitación u oposición a su tratamiento y su portabilidad, así como retirar tu consentimiento en cualquier momento. Escríbeme a <a href="mailto:${EMAIL}">${EMAIL}</a>. Ten en cuenta que la historia clínica debe conservarse durante el plazo legal aunque pidas su supresión.</p>
+<p>Puedes pedirme el acceso a tus datos, su rectificación o supresión, la limitación u oposición a su tratamiento y su portabilidad, así como retirar tu consentimiento en cualquier momento. Escríbeme a <a href="mailto:${EMAIL}">${EMAIL}</a>. Ten en cuenta que, si la normativa obliga a conservar alguna documentación, la guardaré durante el plazo legal aunque pidas su supresión.</p>
 <p>Si consideras que no he tratado bien tus datos, puedes presentar una reclamación ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>).</p>
 
 <p class="muted">Última actualización: ${UPDATED}. Consulta también el <a href="/aviso-legal.html">aviso legal</a>.</p>
