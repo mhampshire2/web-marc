@@ -266,6 +266,40 @@ function addLinks(file, lang) {
 }
 const shells = { en: fs.readFileSync(path.join(OUT, 'en.html'), 'utf8'), es: fs.readFileSync(path.join(OUT, 'index.html'), 'utf8') };
 for (const svc of SERVICES) fs.writeFileSync(path.join(OUT, svc.file), servicePage(svc, shells[svc.lang]));
+// --- Legal pages (Spanish)
+const LEGAL = require('./legal.js');
+function legalPage(pg, shell) {
+  const startMain = shell.indexOf('<main id="top">');
+  const endMain = shell.indexOf('</main>') + '</main>'.length;
+  let before = shell.slice(shell.indexOf('</head>'), startMain);
+  before = before.replace(/href="#(\w[\w-]*)"/g, 'href="/#$1"').replace('href="/#top"', 'href="/"').replace(' aria-current="page"', '');
+  const style = shell.slice(shell.indexOf('<style>'), shell.indexOf('</style>') + 8);
+  const url = `${BASE}/${pg.file}`;
+  const headHtml = `<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>${esc(pg.title)}</title>
+<meta name="description" content="${esc(pg.desc)}">
+<link rel="canonical" href="${url}">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Ccircle cx='13' cy='13' r='10.5' fill='none' stroke='%234F7E6F' stroke-width='2.4' stroke-linecap='round' stroke-dasharray='57 66' transform='rotate(-58 13 13)'/%3E%3C/svg%3E">
+<script defer src="/_vercel/insights/script.js"></script>
+${style}
+<style>.legal h2{margin-top:40px;font-size:1.5rem}.legal p,.legal ul{margin-top:14px;max-width:44em}.legal li{margin-top:6px}.legal a{color:var(--ink)}</style>
+`;
+  const main = `<main id="top">
+  <section class="block" style="border-top:0">
+    <div class="wrap legal">
+      <p class="muted" style="font-size:.9rem"><a href="/">Marc Hampshire, Psicólogo</a> / ${pg.h1}</p>
+      <h1>${pg.h1}</h1>
+${pg.body}
+    </div>
+  </section>
+</main>`;
+  return headHtml + before + main + shell.slice(endMain);
+}
+for (const pg of LEGAL) fs.writeFileSync(path.join(OUT, pg.file), legalPage(pg, shells.es));
 addLinks('en.html', 'en'); addLinks('index.html', 'es'); addLinks('ca.html', 'es');
 // Link "Con qué te puedo ayudar" items to their service pages
 function linkAreas(file, map) {
