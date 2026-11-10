@@ -300,7 +300,7 @@ ${pg.body}
   return headHtml + before + main + shell.slice(endMain);
 }
 for (const pg of LEGAL) fs.writeFileSync(path.join(OUT, pg.file), legalPage(pg, shells.es));
-addLinks('en.html', 'en'); addLinks('index.html', 'es'); addLinks('ca.html', 'es');
+// body link lists removed: the footer already links every service page
 // Link "Con qué te puedo ayudar" items to their service pages
 function linkAreas(file, map) {
   const fp = path.join(OUT, file); let h = fs.readFileSync(fp, 'utf8');

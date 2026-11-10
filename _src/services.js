@@ -49,7 +49,7 @@ module.exports = [
       {
         h: 'How we work',
         p: [
-          'In the first sessions we look at when the anxiety started, what triggers it and what keeps it going. From there we set clear goals.',
+          'In the first sessions we look at when the anxiety started, what triggers it and what keeps it going.',
           "I work from Gestalt psychotherapy and relational psychoanalysis. Rather than trying to switch anxiety off, we look at it as it happens: what you feel in your body, what you're avoiding, what you're not letting yourself want or say. Anxiety often carries something that hasn't found its place yet; becoming aware of it is usually where it starts to loosen.",
           "As a psychologist I don't prescribe medication. If it seems useful, I can suggest you speak to your GP or a psychiatrist alongside therapy."
         ]
@@ -276,7 +276,7 @@ module.exports = [
       {
         h: 'Cómo trabajamos',
         p: [
-          'En las primeras sesiones vemos cuándo empezó la ansiedad, qué la dispara y qué la mantiene. A partir de ahí fijamos objetivos claros.',
+          'En las primeras sesiones vemos cuándo empezó la ansiedad, qué la dispara y qué la mantiene.',
           'Trabajo desde la psicoterapia Gestalt y el psicoanálisis relacional. En lugar de intentar apagar la ansiedad, la miramos mientras aparece: qué sientes en el cuerpo, qué estás evitando, qué no te permites querer o decir. La ansiedad muchas veces lleva algo que todavía no ha encontrado su lugar, y darte cuenta de ello suele ser el principio de que se afloje.',
           'Como psicólogo no receto medicación. Si es útil, puedo sugerirte que lo consultes con tu médico de cabecera o con un psiquiatra a la vez que haces terapia.'
         ]
@@ -382,7 +382,7 @@ module.exports = [
     desc: 'Terapia para la autoestima en el Eixample, Barcelona, y online: autoexigencia, inseguridad, necesidad de aprobación y autocrítica. Castellano, catalán o inglés. 70 €.',
     crumb: 'Psicólogo para la autoestima',
     h1: 'Psicólogo para la autoestima en Barcelona',
-    lead: 'Para cuando te tratas con más dureza que a nadie, te cuesta poner límites o sientes que nunca es suficiente. Con un psicólogo general sanitario colegiado, en el Eixample o por videollamada.',
+    lead: 'Si te tratas con más dureza que a nadie, te cuesta poner límites o nada de lo que haces te parece suficiente. Con un psicólogo general sanitario colegiado, en el Eixample o por videollamada.',
     sections: [
       {
         h: 'Cuándo la autoestima pide atención',
@@ -421,7 +421,7 @@ module.exports = [
     desc: 'Terapia individual para dificultades de pareja y relaciones en el Eixample, Barcelona, y online: dependencia emocional, celos, rupturas y patrones que se repiten. 70 €.',
     crumb: 'Psicólogo para relaciones y pareja',
     h1: 'Psicólogo para relaciones y pareja en Barcelona',
-    lead: 'Para cuando tus relaciones te generan más angustia que calma, o sientes que siempre acabas en el mismo sitio. Terapia individual con un psicólogo general sanitario colegiado, en el Eixample o por videollamada.',
+    lead: 'Cuando tus relaciones te dan más angustia que calma, o acabas siempre en el mismo sitio. Terapia individual con un psicólogo general sanitario colegiado, en el Eixample o por videollamada.',
     sections: [
       {
         h: 'Qué se puede trabajar',
@@ -464,7 +464,7 @@ module.exports = [
     desc: 'Terapia para el estrés crónico y el burnout en el Eixample, Barcelona, y online: agotamiento, desconexión, insomnio y dificultad para parar. Horario de tarde. 70 €.',
     crumb: 'Psicólogo para el estrés y el burnout',
     h1: 'Psicólogo para el estrés y el burnout en Barcelona',
-    lead: 'Para cuando estás siempre cansado, el trabajo te desborda y ya no recuerdas cómo era descansar de verdad. Con un psicólogo general sanitario colegiado, en el Eixample o por videollamada, en horario de tarde.',
+    lead: 'Estás siempre cansado, el trabajo te desborda y ya no recuerdas qué era descansar de verdad. Con un psicólogo general sanitario colegiado, en el Eixample o por videollamada, en horario de tarde.',
     sections: [
       {
         h: 'Señales de que el estrés se ha vuelto demasiado',
