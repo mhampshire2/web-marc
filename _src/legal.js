@@ -93,7 +93,6 @@ module.exports = [
 
 <h2>Cookies y estadísticas</h2>
 <p>Esta web no instala cookies propias. Para saber cuántas personas la visitan uso Vercel Web Analytics, que funciona sin cookies y no te identifica personalmente.</p>
-<p>La sección de opiniones muestra un widget de Doctoralia (Docplanner), que se carga desde sus servidores y puede usar sus propias cookies. Puedes consultar su política en <a href="https://www.doctoralia.es/privacidad" target="_blank" rel="noopener">doctoralia.es/privacidad</a>.</p>
 
 <h2>Menores de edad</h2>
 <p>Si tienes menos de 16 años, para iniciar terapia necesito el consentimiento de tus padres o tutores legales, salvo en los casos en que la ley te permite decidir por tu cuenta.</p>
