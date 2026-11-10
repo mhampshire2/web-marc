@@ -50,7 +50,7 @@ module.exports = [
         h: 'How we work',
         p: [
           'In the first sessions we look at when the anxiety started, what triggers it and what keeps it going. From there we set clear goals.',
-          'I combine Gestalt therapy, which helps you notice what is happening in your body and mind in the moment, with tools from cognitive behavioural therapy and mindfulness: understanding anxious thinking, gradually facing what you avoid and learning to calm your nervous system. Panic attacks and generalised worry are among the problems that respond well to psychological therapy.',
+          "I work from Gestalt psychotherapy and relational psychoanalysis. Rather than trying to switch anxiety off, we look at it as it happens: what you feel in your body, what you're avoiding, what you're not letting yourself want or say. Anxiety often carries something that hasn't found its place yet; becoming aware of it is usually where it starts to loosen.",
           "As a psychologist I don't prescribe medication. If it seems useful, I can suggest you speak to your GP or a psychiatrist alongside therapy."
         ]
       }
@@ -88,7 +88,7 @@ module.exports = [
         h: 'How we work',
         p: [
           'We start by understanding your situation: why you came, what has been hard and what you would like to change. Then we set goals and work on them together, at a pace that suits you.',
-          "My approach is integrative and based on Gestalt therapy, with tools from cognitive behavioural therapy and attachment theory. Sessions can be entirely in English, or move between English and Spanish if you're learning the language and want to.",
+          "I work from Gestalt psychotherapy and relational psychoanalysis: we pay attention to what's happening now, in your life and in the session, and to how you're taking part in it. Sessions can be entirely in English, or move between English and Spanish if you're learning the language and want to.",
           'I also work with international students, including online sessions from anywhere in Spain.'
         ]
       },
@@ -128,7 +128,7 @@ module.exports = [
         h: 'How we work',
         p: [
           'In the first sessions we look at how you are now, how long it has been like this and what may be feeding it. We agree on goals that feel realistic, even if right now everything feels difficult.',
-          'My approach is integrative and based on Gestalt therapy: making room for what you feel instead of fighting it, and noticing how you relate to yourself and others. I combine it with tools from cognitive behavioural therapy, such as gradually returning to activities that give you energy and questioning the harshest thoughts.',
+          'I work from Gestalt psychotherapy and relational psychoanalysis: making room for what you feel instead of fighting it, and noticing, here and now, how you relate to yourself and to others. Often the flatness of depression is covering something else, such as anger, grief or a desire you gave up on, and it is worth meeting it.',
           "As a psychologist I don't prescribe medication. When depression is severe, therapy often works best alongside a GP or psychiatrist, and I can help you take that step."
         ]
       }
@@ -167,7 +167,7 @@ module.exports = [
         h: 'How we work',
         p: [
           'We look at what is driving the overload: the demands of the job, how you respond to them, and patterns such as perfectionism or difficulty saying no.',
-          'From a Gestalt and integrative approach, we work on noticing your limits earlier, recovering rest that actually restores you and making decisions about work from a clearer place. I also use practical tools from cognitive behavioural therapy and mindfulness.',
+          'From Gestalt psychotherapy, we work on noticing your limits as they appear, recognising what you keep doing even though it costs you, and taking responsibility for your choices about work from a clearer place.',
           'Sessions run on Tuesday to Thursday evenings and Friday afternoons, so they can fit around a working day.'
         ]
       }
@@ -240,7 +240,7 @@ module.exports = [
         h: 'How it works',
         p: [
           'We start with a free 15-minute call to see what you need and whether I am the right person. Sessions then take place by video call: you only need a stable connection and a private space where you can talk freely.',
-          'The work is the same as in person: an integrative approach based on Gestalt therapy, with tools from cognitive behavioural therapy and mindfulness. Research on online therapy shows it is effective for many common problems, such as anxiety and depression.',
+          'The work is the same as in person: Gestalt psychotherapy and relational psychoanalysis, attending to what happens in the present, including between us on the screen. Research on online therapy shows it is effective for many common problems, such as anxiety and depression.',
           'If you are ever in Barcelona, sessions can also be in person at my practice in the Eixample.'
         ]
       }
@@ -277,7 +277,7 @@ module.exports = [
         h: 'Cómo trabajamos',
         p: [
           'En las primeras sesiones vemos cuándo empezó la ansiedad, qué la dispara y qué la mantiene. A partir de ahí fijamos objetivos claros.',
-          'Combino la terapia Gestalt, que ayuda a darte cuenta de lo que ocurre en tu cuerpo y tu mente en el momento, con herramientas de la terapia cognitivo-conductual y del mindfulness: entender el pensamiento ansioso, afrontar poco a poco lo que evitas y aprender a calmar el sistema nervioso. Los ataques de pánico y la ansiedad generalizada responden bien a la terapia psicológica.',
+          'Trabajo desde la psicoterapia Gestalt y el psicoanálisis relacional. En lugar de intentar apagar la ansiedad, la miramos mientras aparece: qué sientes en el cuerpo, qué estás evitando, qué no te permites querer o decir. La ansiedad muchas veces lleva algo que todavía no ha encontrado su lugar, y darte cuenta de ello suele ser el principio de que se afloje.',
           'Como psicólogo no receto medicación. Si es útil, puedo sugerirte que lo consultes con tu médico de cabecera o con un psiquiatra a la vez que haces terapia.'
         ]
       },
@@ -398,7 +398,7 @@ module.exports = [
         h: 'Cómo trabajamos',
         p: [
           'La autoestima no se arregla repitiendo frases positivas. Se construye en la manera en que te relacionas contigo y con los demás, y eso lleva tiempo.',
-          'En terapia nos fijamos en cómo aparece esa voz crítica en tu día a día: qué te dice, de dónde viene y de qué intenta protegerte. Trabajo desde la terapia Gestalt y una mirada relacional y del apego, así que también prestamos atención a lo que ocurre en la propia sesión, que muchas veces es el primer lugar donde puedes probar a tratarte de otra manera.'
+          'En terapia nos fijamos en cómo aparece esa voz crítica aquí y ahora: qué te dice, cómo te la dices y qué haces cuando la escuchas. Trabajo desde la psicoterapia Gestalt y el psicoanálisis relacional, así que también prestamos atención a lo que ocurre entre tú y yo en la sesión, que muchas veces es el primer lugar donde puedes probar a tratarte de otra manera.'
         ]
       },
       PROCESS_ES
@@ -438,7 +438,7 @@ module.exports = [
         h: 'Cómo trabajamos',
         p: [
           'La forma en que nos vinculamos se aprende pronto y tiende a repetirse. En terapia intentamos entender la tuya: qué buscas en los demás, qué temes y qué haces, a veces sin darte cuenta, para protegerte.',
-          'Trabajo desde la terapia Gestalt y el psicoanálisis relacional, con la teoría del apego como mapa. La propia relación terapéutica es parte del proceso: un sitio seguro donde notar esos patrones mientras ocurren y probar formas nuevas de estar con otra persona.',
+          'Trabajo desde la psicoterapia Gestalt y el psicoanálisis relacional. La propia relación terapéutica es parte del proceso: un lugar donde esos patrones aparecen, donde puedes verlos mientras ocurren y probar formas nuevas de estar con otra persona.',
           'Trabajo en terapia individual: no hago terapia de pareja con los dos miembros. Si es lo que buscáis, en la llamada gratuita te puedo orientar.'
         ]
       },
@@ -481,7 +481,7 @@ module.exports = [
         h: 'Cómo trabajamos',
         p: [
           'El burnout no aparece por ser débil ni por organizarte mal. Suele aparecer cuando lo que te exige el entorno y lo que te exiges tú se juntan durante demasiado tiempo.',
-          'En terapia miramos las dos partes: qué está sobrecargándote y qué te lleva a no parar, como la autoexigencia, la dificultad para poner límites o el miedo a decepcionar. Desde la terapia Gestalt y un enfoque integrador trabajamos para notar antes tus límites, recuperar un descanso que repare de verdad y tomar decisiones sobre el trabajo desde un lugar más claro. También uso herramientas prácticas de la terapia cognitivo-conductual y del mindfulness.',
+          'En terapia miramos las dos partes: qué está sobrecargándote y qué te lleva a no parar, como la autoexigencia, la dificultad para poner límites o el miedo a decepcionar. Desde la psicoterapia Gestalt trabajamos para que notes tus límites cuando aparecen, reconozcas lo que sigues haciendo aunque te cueste caro y te hagas cargo de tus decisiones sobre el trabajo desde un lugar más claro.',
           'Atiendo de martes a viernes por la tarde, para que las sesiones encajen con una jornada laboral.'
         ]
       },

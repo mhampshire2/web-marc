@@ -26,18 +26,18 @@ for (const e of i18nElements(src)) T.es[e.key] = e.inner;
 
 const META = {
   es: {
-    title: 'Psicólogo en Barcelona (Eixample) | Marc Hampshire',
-    desc: 'Psicólogo general sanitario en el Eixample y online en toda España. Terapia individual para ansiedad, autoestima, relaciones, duelo o burnout, en castellano, catalán o inglés.',
+    title: 'Psicólogo y psicoterapeuta Gestalt en Barcelona (Eixample) | Marc Hampshire',
+    desc: 'Psicólogo general sanitario y psicoterapeuta Gestalt en el Eixample y online. Psicoterapia individual para ansiedad, autoestima, relaciones, duelo o burnout, en castellano, catalán o inglés.',
     locale: 'es_ES', job: 'Psicólogo general sanitario'
   },
   ca: {
-    title: 'Psicòleg a Barcelona (Eixample) | Marc Hampshire',
-    desc: "Psicòleg general sanitari a l'Eixample i en línia a tot Espanya. Teràpia individual per a ansietat, dol o autoestima, en català, castellà o anglès.",
+    title: 'Psicòleg i psicoterapeuta Gestalt a Barcelona (Eixample) | Marc Hampshire',
+    desc: "Psicòleg general sanitari i psicoterapeuta Gestalt a l'Eixample i en línia. Psicoteràpia individual per a ansietat, autoestima, relacions, dol o burnout, en català, castellà o anglès.",
     locale: 'ca_ES', job: 'Psicòleg general sanitari'
   },
   en: {
-    title: 'English-Speaking Psychologist & Therapist in Barcelona | Marc Hampshire',
-    desc: 'Native English-speaking licensed psychologist in Barcelona (Eixample) and online across Spain. Therapy in English for expats. Free 15-minute call.',
+    title: 'English-Speaking Psychologist & Gestalt Psychotherapist in Barcelona | Marc Hampshire',
+    desc: 'Native English-speaking licensed psychologist and Gestalt psychotherapist in Barcelona (Eixample) and online across Spain. Psychotherapy in English. Free 15-minute call.',
     locale: 'en_GB', job: 'Licensed health psychologist (Psicólogo General Sanitario)'
   }
 };
