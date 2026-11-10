@@ -249,7 +249,7 @@ module.exports = [
     faq: [
       ['Is online therapy as effective as in person?', 'For most common difficulties, such as anxiety, depression and stress, research shows similar results. We can also review together whether it is working for you.'],
       ['Are you licensed to practise in Spain?', "Yes. I'm a licensed health psychologist (Psicólogo General Sanitario), registered with the Official College of Psychologists of Catalonia under no. 30868."],
-      ['How much does it cost and how do I pay?', 'Each session is €70, the same as in person. You can pay by bank transfer or Bizum, and you receive an invoice for every session.']
+      ['How much does it cost and how do I pay?', 'Each session is €70, the same as in person. You can pay by Bizum or bank transfer (or cash in person), and you receive an invoice for every session.']
     ]
   },
   {
@@ -370,7 +370,7 @@ module.exports = [
     faq: [
       ['¿Cómo pido la primera cita?', 'Puedes reservar una llamada gratuita de 15 minutos, reservar directamente una sesión presencial o escribirme por WhatsApp.'],
       ['¿Atiendes en catalán o en inglés?', 'Sí. Hablo castellano e inglés como lenguas nativas, y también catalán.'],
-      ['¿Cómo se paga?', 'Por transferencia o Bizum, y recibes factura de cada sesión.'],
+      ['¿Cómo se paga?', 'Por Bizum, transferencia o en efectivo, y recibes factura de cada sesión.'],
       ['¿Trabajas con adolescentes?', 'Sí, con adolescentes, adultos y personas mayores de 65 años.'],
       ['¿Cuánto dura una terapia?', 'Es un proceso de duración media o larga: las tres primeras sesiones son de exploración y en la cuarta fijamos objetivos. No trabajo con soluciones rápidas, aunque también atiendo crisis puntuales.']
     ]
