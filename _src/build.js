@@ -146,7 +146,7 @@ fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitem
 
 // --- Service landing pages (English and Spanish)
 const SERVICES = require('./services.js');
-const CALL = 'https://calendar.app.google/8UB1FcW1vVtsC4eD9';
+const CALL = 'https://calendar.app.google/oP3mJpvH2ySd55uu7';
 const SVC_URL = f => `${BASE}/${f}`;
 const L = {
   en: { home: '/en.html', homeName: 'Marc Hampshire, Psychologist', rating: '5.0 · 16 reviews on Doctoralia', call: 'Free 15-minute call', book: 'Book an in-person session',
