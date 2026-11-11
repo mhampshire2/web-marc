@@ -28,17 +28,17 @@ const META = {
   es: {
     title: 'Psicólogo y psicoterapeuta Gestalt en Barcelona (Eixample) | Marc Hampshire',
     desc: 'Psicólogo general sanitario y psicoterapeuta Gestalt en el Eixample y online. Psicoterapia individual para ansiedad, autoestima, relaciones, duelo o burnout, en castellano, catalán o inglés.',
-    locale: 'es_ES', job: 'Psicólogo general sanitario'
+    locale: 'es_ES', job: 'Psicólogo general sanitario y psicoterapeuta Gestalt'
   },
   ca: {
     title: 'Psicòleg i psicoterapeuta Gestalt a Barcelona (Eixample) | Marc Hampshire',
     desc: "Psicòleg general sanitari i psicoterapeuta Gestalt a l'Eixample i en línia. Psicoteràpia individual per a ansietat, autoestima, relacions, dol o burnout, en català, castellà o anglès.",
-    locale: 'ca_ES', job: 'Psicòleg general sanitari'
+    locale: 'ca_ES', job: 'Psicòleg general sanitari i psicoterapeuta Gestalt'
   },
   en: {
     title: 'English-Speaking Psychologist & Gestalt Psychotherapist in Barcelona | Marc Hampshire',
     desc: 'Native English-speaking licensed psychologist and Gestalt psychotherapist in Barcelona (Eixample) and online across Spain. Psychotherapy in English. Free 15-minute call.',
-    locale: 'en_GB', job: 'Licensed health psychologist (Psicólogo General Sanitario)'
+    locale: 'en_GB', job: 'Licensed health psychologist (Psicólogo General Sanitario) and Gestalt psychotherapist'
   }
 };
 
@@ -68,6 +68,7 @@ function jsonLd(lang) {
     ],
     areaServed: [{ '@type': 'City', name: 'Barcelona' }, { '@type': 'Country', name: 'Spain' }],
     availableLanguage: ['es', 'ca', 'en'],
+    knowsAbout: ['Terapia Gestalt', 'Psicoterapia individual', 'Psicoanálisis relacional', 'Gestalt therapy'],
     founder: {
       '@type': 'Person',
       name: 'Marc Hampshire Viñamata',
@@ -75,6 +76,8 @@ function jsonLd(lang) {
       image: BASE + '/marc.jpg',
       knowsLanguage: ['en', 'es', 'ca'],
       identifier: 'COPC 30868',
+      knowsAbout: ['Terapia Gestalt', 'Psicoterapia', 'Psicoanálisis relacional', 'Gestalt therapy', 'Psychotherapy'],
+      alumniOf: { '@type': 'EducationalOrganization', name: 'Institut Gestalt', address: 'Barcelona' },
       memberOf: { '@type': 'Organization', name: "Col·legi Oficial de Psicologia de Catalunya" }
     }
   };
