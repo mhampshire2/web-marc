@@ -68,6 +68,7 @@ function jsonLd(lang) {
     ],
     areaServed: [{ '@type': 'City', name: 'Barcelona' }, { '@type': 'Country', name: 'Spain' }],
     availableLanguage: ['es', 'ca', 'en'],
+    sameAs: ['https://www.doctoralia.es/marc-hampshire/psicologo/barcelona', 'https://www.psychologytoday.com/es/psicologos-psicoterapeutas/marc-hampshire-vinamata-barcelona-bc/1533085', 'https://maps.google.com/?cid=14876277249262587877'],
     knowsAbout: ['Terapia Gestalt', 'Psicoterapia individual', 'Psicoanálisis relacional', 'Gestalt therapy'],
     founder: {
       '@type': 'Person',
