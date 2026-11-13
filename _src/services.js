@@ -24,7 +24,7 @@ const WHERE_EN = 'At my practice on Carrer de la Diputació 153 and at Clínica 
 const CRISIS_EN = "If you're in crisis or worried about your safety, call 112 (emergencies) or 024 (Spain's suicide prevention line, free and available 24 hours).";
 const CRISIS_ES = 'Si estás en crisis o te preocupa tu seguridad, llama al 112 (emergencias) o al 024 (línea de atención a la conducta suicida, gratuita y disponible las 24 horas).';
 
-module.exports = [
+const CORE = [
   {
     lang: 'en',
     file: 'anxiety-therapy-in-english.html',
@@ -500,3 +500,30 @@ module.exports = [
     ]
   }
 ];
+
+// --- Extra pages (new English, Spanish and Catalan pages) and cross-language links
+const CONSTS = { PRICE_EN, PRICE_ES, PROCESS_EN, PROCESS_ES, WHERE_EN, WHERE_ES, CRISIS_EN, CRISIS_ES };
+const ALL = CORE.concat(require('./services-new-en.js')(CONSTS), require('./services-new-es.js')(CONSTS), require('./services-new-ca.js')(CONSTS));
+
+// Groups of equivalent pages in different languages (used for hreflang and the language switcher)
+const GROUPS = [
+  ['psicologo-ansiedad-barcelona.html', 'anxiety-therapy-in-english.html', 'psicoleg-ansietat-barcelona.html'],
+  ['psicologo-duelo-barcelona.html', 'grief-counselling-in-english.html', 'psicoleg-dol-barcelona.html'],
+  ['psicologo-estres-burnout-barcelona.html', 'burnout-therapy-in-english.html', 'psicoleg-estres-burnout-barcelona.html'],
+  ['psicologo-depresion-barcelona.html', 'depression-therapy-in-english.html', 'psicoleg-depressio-barcelona.html'],
+  ['terapia-gestalt-barcelona.html', 'gestalt-therapy-barcelona.html', 'psicoterapia-gestalt-barcelona.html'],
+  ['psicologo-trauma-barcelona.html', 'trauma-therapy-in-english-barcelona.html', 'psicoleg-trauma-barcelona.html'],
+  ['psicologo-online-espana.html', 'online-therapy-in-english-spain.html', 'psicoleg-en-linia-espanya.html'],
+  ['psicologo-autoestima-barcelona.html', 'psicoleg-autoestima-barcelona.html'],
+  ['psicologo-relaciones-pareja-barcelona.html', 'psicoleg-relacions-barcelona.html'],
+  ['psicologo-eixample.html', 'psicoleg-eixample.html'],
+  ['psicologo-en-ingles-barcelona.html', 'therapy-for-expats.html']
+];
+const BY_FILE = Object.fromEntries(ALL.map(s => [s.file, s]));
+for (const g of GROUPS) {
+  for (const f of g) {
+    if (!BY_FILE[f]) throw new Error('Unknown page in GROUPS: ' + f);
+    BY_FILE[f].alt = Object.fromEntries(g.filter(o => o !== f).map(o => [BY_FILE[o].lang, o]));
+  }
+}
+module.exports = ALL;
