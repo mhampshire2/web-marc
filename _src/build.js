@@ -316,7 +316,7 @@ ${pg.body}
 for (const pg of LEGAL) fs.writeFileSync(path.join(OUT, pg.file), legalPage(pg, shells.es));
 
 // --- Articles
-const ARTICLES = require('./articles.js');
+const ARTICLES = [];
 const MONTHS = { en: ['January','February','March','April','May','June','July','August','September','October','November','December'],
   es: ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'] };
 const fmtDate = (iso, lang) => { const [y, m, d] = iso.split('-').map(Number); return lang === 'en' ? `${d} ${MONTHS.en[m - 1]} ${y}` : `${d} de ${MONTHS.es[m - 1]} de ${y}`; };
@@ -404,6 +404,7 @@ const INDEX = {
         h1: 'Artículos', lead: 'Textos sobre terapia y salud mental, escritos desde la consulta.' }
 };
 for (const [lang, ix] of Object.entries(INDEX)) {
+  if (!ARTICLES.some(a => a.lang === lang)) continue;
   const t = L[lang];
   const { before, contact, after, style } = shellParts(shells[lang], t);
   const list = ARTICLES.filter(a => a.lang === lang);
@@ -432,10 +433,10 @@ function linkAreas(file, map) {
   for (const [key, url] of Object.entries(map)) h = h.replace(new RegExp('(<h3 data-i18n="' + key + '">)([^<]+)(</h3>)'), `$1<a href="${url}">$2</a>$3`);
   fs.writeFileSync(fp, h);
 }
-const ES_AREAS = { a1h: '/psicologo-relaciones-pareja-barcelona.html', a2h: '/psicologo-ansiedad-barcelona.html', a4h: '/psicologo-autoestima-barcelona.html', a5h: '/psicologo-duelo-barcelona.html', a9h: '/psicologo-estres-burnout-barcelona.html', a6h: '/psicologo-trauma-barcelona.html', a11h: '/psicologo-depresion-barcelona.html' };
-const CA_AREAS = { a1h: '/psicoleg-relacions-barcelona.html', a2h: '/psicoleg-ansietat-barcelona.html', a4h: '/psicoleg-autoestima-barcelona.html', a5h: '/psicoleg-dol-barcelona.html', a9h: '/psicoleg-estres-burnout-barcelona.html', a6h: '/psicoleg-trauma-barcelona.html', a11h: '/psicoleg-depressio-barcelona.html' };
+const ES_AREAS = { a1h: '/psicologo-relaciones-pareja-barcelona.html', a2h: '/psicologo-ansiedad-barcelona.html', a4h: '/psicologo-autoestima-barcelona.html', a5h: '/psicologo-duelo-barcelona.html', a9h: '/psicologo-estres-burnout-barcelona.html' };
+const CA_AREAS = { a1h: '/psicologo-relaciones-pareja-barcelona.html', a2h: '/psicologo-ansiedad-barcelona.html', a4h: '/psicologo-autoestima-barcelona.html', a5h: '/psicologo-duelo-barcelona.html', a9h: '/psicologo-estres-burnout-barcelona.html' };
 linkAreas('index.html', ES_AREAS); linkAreas('ca.html', CA_AREAS);
-linkAreas('en.html', { a2h: '/anxiety-therapy-in-english.html', a5h: '/grief-counselling-in-english.html', a9h: '/burnout-therapy-in-english.html', a6h: '/trauma-therapy-in-english-barcelona.html', a11h: '/depression-therapy-in-english.html' });
+linkAreas('en.html', { a2h: '/anxiety-therapy-in-english.html', a5h: '/grief-counselling-in-english.html', a9h: '/burnout-therapy-in-english.html' });
 
 
 // Site-wide footer links (internal linking): pages in the same language + articles
@@ -457,7 +458,7 @@ const today = new Date().toISOString().slice(0, 10);
 const langUrls = Object.values(URLS).map(u => `  <url>\n    <loc>${BASE}${u}</loc>\n    <lastmod>${today}</lastmod>\n${Object.entries(URLS).map(([l, x]) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${BASE}${x}"/>`).join('\n')}\n  </url>`);
 const svcUrls = SERVICES.map(svc => `  <url>\n    <loc>${BASE}/${svc.file}</loc>\n    <lastmod>${today}</lastmod>\n${svc.alt ? [`    <xhtml:link rel="alternate" hreflang="${svc.lang}" href="${BASE}/${svc.file}"/>`, ...Object.entries(svc.alt).map(([l, f]) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${BASE}/${f}"/>`)].join('\n') + '\n' : ''}  </url>`);
 const plainUrl = f => `  <url>\n    <loc>${BASE}/${f}</loc>\n    <lastmod>${today}</lastmod>\n  </url>`;
-const extraUrls = [...Object.values(INDEX).map(i => i.file), ...ARTICLES.map(a => a.file), 'supervision-terapeutas.html'].map(plainUrl);
+const extraUrls = ['supervision-terapeutas.html'].map(plainUrl);
 fs.writeFileSync(path.join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${langUrls.concat(svcUrls, extraUrls).join('\n')}\n</urlset>\n`);
 // llms.txt: plain-language summary for AI assistants and crawlers
 const llmsList = lang => SERVICES.filter(o => o.lang === lang).map(o => `- [${o.crumb}](${BASE}/${o.file}): ${o.desc}`).join('\n');
