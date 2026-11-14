@@ -70,6 +70,8 @@ function jsonLd(lang) {
     availableLanguage: ['es', 'ca', 'en'],
     sameAs: ['https://www.doctoralia.es/marc-hampshire/psicologo/barcelona', 'https://www.psychologytoday.com/es/psicologos-psicoterapeutas/marc-hampshire-vinamata-barcelona-bc/1533085', 'https://maps.google.com/?cid=14876277249262587877'],
     knowsAbout: ['Terapia Gestalt', 'Psicoterapia individual', 'Psicoanálisis relacional', 'Gestalt therapy'],
+    medicalSpecialty: 'Psychiatric',
+    isAcceptingNewPatients: true,
     founder: {
       '@type': 'Person',
       name: 'Marc Hampshire Viñamata',
@@ -78,7 +80,8 @@ function jsonLd(lang) {
       knowsLanguage: ['en', 'es', 'ca'],
       identifier: 'COPC 30868',
       knowsAbout: ['Terapia Gestalt', 'Psicoterapia', 'Psicoanálisis relacional', 'Gestalt therapy', 'Psychotherapy'],
-      alumniOf: { '@type': 'EducationalOrganization', name: 'Institut Gestalt', address: 'Barcelona' },
+      alumniOf: [{ '@type': 'EducationalOrganization', name: 'Institut Gestalt', address: 'Barcelona' }, { '@type': 'CollegeOrUniversity', name: 'Universitat Autònoma de Barcelona' }],
+      sameAs: ['https://www.linkedin.com/in/marc-hampshire-vi%C3%B1amata-999176211/', 'https://www.psychologytoday.com/es/psicologos-psicoterapeutas/marc-hampshire-vinamata-barcelona-bc/1533085', 'https://proyectoart.com/equipo/marc-hampshire/'],
       memberOf: { '@type': 'Organization', name: "Col·legi Oficial de Psicologia de Catalunya" }
     }
   };
