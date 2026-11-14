@@ -369,7 +369,7 @@ const CORE = [
     price: PRICE_ES,
     faq: [
       ['¿Cómo pido la primera cita?', 'Puedes reservar una llamada gratuita de 15 minutos, reservar directamente una sesión presencial o escribirme por WhatsApp.'],
-      ['¿Atiendes en catalán o en inglés?', 'Sí. Hablo castellano e inglés como lenguas nativas, y también catalán.'],
+      ['¿Atiendes en catalán o en inglés?', 'Sí. Atiendo en castellano, catalán e inglés.'],
       ['¿Cómo se paga?', 'Por Bizum, transferencia o en efectivo (el efectivo, siempre bienvenido 😉), y recibes factura de cada sesión.'],
       ['¿Trabajas con adolescentes?', 'Sí, con adolescentes, adultos y personas mayores de 65 años.'],
       ['¿Cuánto dura una terapia?', 'Es un proceso de duración media o larga: las tres primeras sesiones son de exploración y en la cuarta fijamos objetivos. No trabajo con soluciones rápidas, aunque también atiendo crisis puntuales.']

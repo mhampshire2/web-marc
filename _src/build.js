@@ -68,7 +68,7 @@ function jsonLd(lang) {
     ],
     areaServed: [{ '@type': 'City', name: 'Barcelona' }, { '@type': 'Country', name: 'Spain' }],
     availableLanguage: ['es', 'ca', 'en'],
-    sameAs: ['https://www.psychologytoday.com/es/psicologos-psicoterapeutas/marc-hampshire-vinamata-barcelona-bc/1533085', 'https://maps.google.com/?cid=14876277249262587877'],
+    sameAs: ['https://www.doctoralia.es/marc-hampshire/psicologo/barcelona', 'https://www.psychologytoday.com/es/psicologos-psicoterapeutas/marc-hampshire-vinamata-barcelona-bc/1533085', 'https://maps.google.com/?cid=14876277249262587877'],
     knowsAbout: ['Terapia Gestalt', 'Psicoterapia individual', 'Psicoanálisis relacional', 'Gestalt therapy'],
     founder: {
       '@type': 'Person',
@@ -160,13 +160,13 @@ const L = {
         note: 'This article is general information. It is not a diagnosis or a substitute for professional advice.',
         ctaH: 'Want to talk it through?', ctaP: 'Book a free 15-minute call, no commitment. We see what you need and whether I can help.', wa: 'WhatsApp', relH: 'Related' },
   es: { home: '/', homeName: 'Marc Hampshire, Psicólogo', rating: '5,0 · 16 opiniones en Doctoralia', call: 'Llamada gratuita de 15 min', book: 'Reservar sesión presencial',
-        facts: ['Colegiado COPC nº 30868', 'Castellano e inglés nativos', 'En consulta en Barcelona · online en toda España'],
+        facts: ['Colegiado COPC nº 30868', 'Castellano, catalán e inglés', 'En consulta en Barcelona · online en toda España'],
         fees: 'Precio', seeAll: 'Ver todas las sesiones y precios', faq: 'Preguntas frecuentes', locale: 'es_ES', more: 'Más sobre cómo te puedo ayudar:',
         articles: 'Artículos', idx: 'articulos.html', by: 'Por Marc Hampshire Viñamata, psicólogo general sanitario (COPC 30868)', pub: 'Publicado',
         note: 'Este artículo es información general. No es un diagnóstico ni sustituye el consejo de un profesional.',
         ctaH: '¿Quieres hablarlo?', ctaP: 'Reserva una llamada gratuita de 15 minutos, sin compromiso. Vemos qué necesitas y si puedo ayudarte.', wa: 'WhatsApp', relH: 'Relacionado' },
   ca: { home: '/ca.html', homeName: 'Marc Hampshire, Psicòleg', rating: '5,0 · 16 opinions a Doctoralia', call: 'Trucada gratuïta de 15 min', book: 'Reservar sessió presencial',
-        facts: ['Col·legiat COPC núm. 30868', 'Anglès i castellà natius, i català', 'Presencial a Barcelona · en línia a tot Espanya'],
+        facts: ['Col·legiat COPC núm. 30868', 'Català, castellà i anglès', 'Presencial a Barcelona · en línia a tot Espanya'],
         fees: 'Preu', seeAll: 'Veure totes les sessions i preus', faq: 'Preguntes freqüents', locale: 'ca_ES', more: 'Més sobre com et puc ajudar:' }
 };
 function servicePage(svc, shell) {
