@@ -59,6 +59,7 @@ function jsonLd(lang) {
     telephone: '+34624080367',
     email: 'terapiaham@gmail.com',
     priceRange: '70 €',
+    aggregateRating: { '@type': 'AggregateRating', ratingValue: '5.0', reviewCount: 16, bestRating: '5', worstRating: '1' },
     address: { '@type': 'PostalAddress', streetAddress: 'Carrer de la Diputació 153', postalCode: '08011', addressLocality: 'Barcelona', addressRegion: 'Barcelona', addressCountry: 'ES' },
     geo: { '@type': 'GeoCoordinates', latitude: 41.3837933, longitude: 2.1580657 },
     hasMap: 'https://www.google.com/maps/search/?api=1&query=Marc+Hampshire+Psic%C3%B3logo&query_place_id=ChIJhSbvF2-jpBIR5Y-FHlcnc84',
