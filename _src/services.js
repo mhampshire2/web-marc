@@ -6,7 +6,7 @@ const PROCESS_ES = {
   p: [
     'Trabajo con un proceso de exploración, no con parches ni soluciones rápidas: primero entendemos qué te pasa y por qué se repite; después fijamos objetivos juntos.',
     '<strong>Sesiones 1 a 3:</strong> son de exploración. Hablamos del motivo de consulta, de tu historia y de cómo vives lo que te pasa. No hay prisa por resolver nada.',
-    '<strong>Sesión 4:</strong> establecemos objetivos y forma de trabajo. Los objetivos orientan el proceso, pero no lo agotan: seguimos explorando.',
+    '<strong>Sesión 4:</strong> empieza el tratamiento. Hablamos de los objetivos y establecemos un plan. Los objetivos orientan el proceso, pero no lo agotan: seguimos explorando.',
     'Suele ser un trabajo de duración media o larga, aunque también atiendo crisis puntuales.'
   ]
 };
@@ -15,7 +15,7 @@ const PROCESS_EN = {
   p: [
     "I work through a process of exploration, not patches or quick fixes: first we understand what's happening and why it keeps repeating; then we set goals together.",
     "<strong>Sessions 1 to 3:</strong> exploratory. We look at what brings you, your history and how you experience what's happening. There's no rush to solve anything.",
-    "<strong>Session 4:</strong> we agree on goals and a way of working. The goals guide the process but don't exhaust it: we keep exploring.",
+    "<strong>Session 4:</strong> treatment begins. We talk about goals and set out a plan. The goals guide the process but don't exhaust it: we keep exploring.",
     "It's usually medium to long-term work, though I also see people for an acute crisis."
   ]
 };
