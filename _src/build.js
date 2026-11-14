@@ -57,7 +57,6 @@ function jsonLd(lang) {
     url: BASE + URLS[lang],
     image: BASE + '/marc.jpg',
     telephone: '+34624080367',
-    email: 'terapiaham@gmail.com',
     priceRange: '70 €',
     aggregateRating: { '@type': 'AggregateRating', ratingValue: '5.0', reviewCount: 16, bestRating: '5', worstRating: '1' },
     address: { '@type': 'PostalAddress', streetAddress: 'Carrer de la Diputació 153', postalCode: '08011', addressLocality: 'Barcelona', addressRegion: 'Barcelona', addressCountry: 'ES' },
@@ -282,7 +281,8 @@ function addLinks(file, lang) {
 const shells = { en: fs.readFileSync(path.join(OUT, 'en.html'), 'utf8'), es: fs.readFileSync(path.join(OUT, 'index.html'), 'utf8'), ca: fs.readFileSync(path.join(OUT, 'ca.html'), 'utf8') };
 for (const svc of SERVICES) fs.writeFileSync(path.join(OUT, svc.file), servicePage(svc, shells[svc.lang]));
 // --- Legal pages (Spanish)
-const LEGAL = require('./legal.js');
+// Legal pages are maintained as published files (they hold the legal contact details) and are not regenerated here.
+const LEGAL = [];
 function legalPage(pg, shell) {
   const startMain = shell.indexOf('<main id="top">');
   const endMain = shell.indexOf('</main>') + '</main>'.length;

@@ -517,4 +517,5 @@ for (const g of GROUPS) {
     BY_FILE[f].alt = Object.fromEntries(g.filter(o => o !== f).map(o => [BY_FILE[o].lang, o]));
   }
 }
+require('./services-extra.js')(ALL);
 module.exports = ALL;
