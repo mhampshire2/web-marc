@@ -67,7 +67,12 @@ const VIEW = {
     ]
   }
 };
+const US_FAQ = ["I'm American and living in Spain. How does the cost compare?", "Sessions are €70, 45 to 50 minutes. Many Americans in Barcelona find that's well under what private therapy cost them at home. I issue an invoice for every session, which you can submit to an international health insurer if your policy covers therapy. Sessions are for people living in Spain."];
 module.exports = ALL => {
+  for (const f of ['therapy-for-expats.html', 'online-therapy-in-english-spain.html']) {
+    const s = ALL.find(x => x.file === f);
+    if (s && !s.faq.some(q => q[0] === US_FAQ[0])) s.faq.splice(Math.max(0, s.faq.length - 1), 0, US_FAQ);
+  }
   for (const [file, v] of Object.entries(VIEW)) {
     const s = ALL.find(x => x.file === file);
     if (!s) throw new Error('services-extra: missing ' + file);
