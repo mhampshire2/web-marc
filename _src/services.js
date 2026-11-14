@@ -1,11 +1,11 @@
 // Content for the service landing pages (English and Spanish)
-const PRICE_EN = ['Individual therapy', '€70', 'The first three sessions last an hour; after that, 45 to 50 minutes.'];
-const PRICE_ES = ['Terapia individual', '70 €', 'Las tres primeras sesiones duran una hora; después, de 45 a 50 minutos.'];
+const PRICE_EN = ['Individual therapy', '€70', 'Sessions last 45 to 50 minutes.'];
+const PRICE_ES = ['Terapia individual', '70 €', 'Las sesiones duran de 45 a 50 minutos.'];
 const PROCESS_ES = {
   h: 'Cómo es el proceso',
   p: [
     'Trabajo con un proceso de exploración, no con parches ni soluciones rápidas: primero entendemos qué te pasa y por qué se repite; después fijamos objetivos juntos.',
-    '<strong>Sesiones 1 a 3:</strong> son de exploración y duran una hora. Hablamos del motivo de consulta, de tu historia y de cómo vives lo que te pasa. No hay prisa por resolver nada.',
+    '<strong>Sesiones 1 a 3:</strong> son de exploración. Hablamos del motivo de consulta, de tu historia y de cómo vives lo que te pasa. No hay prisa por resolver nada.',
     '<strong>Sesión 4:</strong> establecemos objetivos y forma de trabajo. Los objetivos orientan el proceso, pero no lo agotan: seguimos explorando.',
     'Suele ser un trabajo de duración media o larga, aunque también atiendo crisis puntuales.'
   ]
@@ -14,7 +14,7 @@ const PROCESS_EN = {
   h: 'What the process looks like',
   p: [
     "I work through a process of exploration, not patches or quick fixes: first we understand what's happening and why it keeps repeating; then we set goals together.",
-    "<strong>Sessions 1 to 3:</strong> exploratory, one hour each. We look at what brings you, your history and how you experience what's happening. There's no rush to solve anything.",
+    "<strong>Sessions 1 to 3:</strong> exploratory. We look at what brings you, your history and how you experience what's happening. There's no rush to solve anything.",
     "<strong>Session 4:</strong> we agree on goals and a way of working. The goals guide the process but don't exhaust it: we keep exploring.",
     "It's usually medium to long-term work, though I also see people for an acute crisis."
   ]
@@ -291,7 +291,7 @@ const CORE = [
       ['¿Se puede hacer online?', 'Sí, por videollamada desde cualquier lugar de España. Solo necesitas un espacio tranquilo y privado.'],
       ['Ya tomo medicación. ¿Puedo hacer terapia?', 'Sí. Es habitual combinar terapia y medicación. Solo dímelo para tenerlo en cuenta.'],
       ['¿Dónde son las sesiones?', WHERE_ES],
-      ['¿Cuánto cuesta una sesión?', '70 € por sesión individual. Las tres primeras duran una hora; después, de 45 a 50 minutos.']
+      ['¿Cuánto cuesta una sesión?', '70 € por sesión individual, de 45 a 50 minutos.']
     ]
   },
   {
@@ -332,7 +332,7 @@ const CORE = [
       ['¿También trabajas el duelo tras una ruptura?', 'Sí. Perder una relación también es una pérdida y merece el mismo cuidado.'],
       ['¿Cuánto dura la terapia de duelo?', 'Suele ser un proceso de duración media o larga. Las tres primeras sesiones son de exploración y en la cuarta fijamos objetivos; a partir de ahí revisamos juntos cómo avanza. Si estás en un momento agudo justo después de una pérdida, también puedo atenderte en una crisis puntual.'],
       ['¿Dónde son las sesiones?', WHERE_ES],
-      ['¿Cuánto cuesta una sesión?', '70 € por sesión individual. Las tres primeras duran una hora; después, de 45 a 50 minutos.']
+      ['¿Cuánto cuesta una sesión?', '70 € por sesión individual, de 45 a 50 minutos.']
     ]
   },
   {
@@ -411,7 +411,7 @@ const CORE = [
       ['¿La autoestima tiene que ver con mis relaciones?', 'Muchas veces sí. Cómo te ves influye en cómo te vinculas, y al revés. Si es lo que más te preocupa, mira también la página de <a href="/psicologo-relaciones-pareja-barcelona.html">relaciones y pareja</a>.'],
       ['¿Se puede hacer online?', 'Sí, por videollamada desde cualquier lugar de España.'],
       ['¿Dónde son las sesiones?', WHERE_ES],
-      ['¿Cuánto cuesta una sesión?', '70 € por sesión individual. Las tres primeras duran una hora; después, de 45 a 50 minutos.']
+      ['¿Cuánto cuesta una sesión?', '70 € por sesión individual, de 45 a 50 minutos.']
     ]
   },
   {
@@ -453,7 +453,7 @@ const CORE = [
       ['¿También trabajas las rupturas?', 'Sí. Perder una relación es una pérdida; puedes leer más en la página de <a href="/psicologo-duelo-barcelona.html">duelo</a>.'],
       ['¿Se puede hacer online?', 'Sí, por videollamada desde cualquier lugar de España.'],
       ['¿Dónde son las sesiones?', WHERE_ES],
-      ['¿Cuánto cuesta una sesión?', '70 € por sesión individual. Las tres primeras duran una hora; después, de 45 a 50 minutos.']
+      ['¿Cuánto cuesta una sesión?', '70 € por sesión individual, de 45 a 50 minutos.']
     ]
   },
   {
@@ -496,7 +496,7 @@ const CORE = [
       ['¿Se enterará mi empresa?', 'No. La terapia es confidencial y las facturas se emiten a tu nombre.'],
       ['¿Se puede hacer online?', 'Sí, por videollamada desde cualquier lugar de España. Si prefieres hacerla en inglés, mira <a href="/burnout-therapy-in-english.html">Burnout therapy in English</a>.'],
       ['¿Dónde son las sesiones?', WHERE_ES],
-      ['¿Cuánto cuesta una sesión?', '70 € por sesión individual. Las tres primeras duran una hora; después, de 45 a 50 minutos.']
+      ['¿Cuánto cuesta una sesión?', '70 € por sesión individual, de 45 a 50 minutos.']
     ]
   }
 ];

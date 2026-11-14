@@ -469,7 +469,7 @@ fs.writeFileSync(path.join(OUT, 'llms.txt'), `# Marc Hampshire Viñamata, psycho
 
 - Address: Carrer de la Diputació 153, 08011 Barcelona (also works at Clínica ART, Carrer de la Diputació 176)
 - Hours: Tuesday to Thursday 16:00-21:00, Friday 15:00-19:30
-- Price: 70 EUR per individual session (first three sessions last one hour, then 45-50 minutes). Invoice for every session.
+- Price: 70 EUR per individual session (45-50 minutes). Invoice for every session.
 - Free 15-minute introductory call: https://calendar.app.google/oP3mJpvH2ySd55uu7
 - Phone and WhatsApp: +34 624 08 03 67
 - Approach: Gestalt psychotherapy and relational psychoanalysis. Process of exploration (three exploratory sessions, goals in the fourth), usually medium to long term. Not a quick-fix or technique-based approach.

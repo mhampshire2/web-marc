@@ -1,7 +1,7 @@
 // New Spanish service pages
 module.exports = C => {
   const { PRICE_ES, PROCESS_ES, WHERE_ES, CRISIS_ES } = C;
-  const FAQ_COST = ['¿Cuánto cuesta una sesión?', '70 € por sesión individual. Las tres primeras duran una hora; después, de 45 a 50 minutos.'];
+  const FAQ_COST = ['¿Cuánto cuesta una sesión?', '70 € por sesión individual, de 45 a 50 minutos.'];
   return [
     {
       lang: 'es',

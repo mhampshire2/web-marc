@@ -1,7 +1,7 @@
 // New English service pages. Receives the shared constants from services.js
 module.exports = C => {
   const { PRICE_EN, PROCESS_EN, WHERE_EN, CRISIS_EN } = C;
-  const FAQ_COST = ['How much does a session cost?', '€70 per individual session. The first three sessions last an hour; after that, 45 to 50 minutes.'];
+  const FAQ_COST = ['How much does a session cost?', '€70 per individual session. Sessions last 45 to 50 minutes.'];
   return [
     {
       lang: 'en',
