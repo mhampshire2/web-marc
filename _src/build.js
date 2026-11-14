@@ -107,7 +107,7 @@ ${alt}
 <meta property="og:image" content="${BASE}/marc.jpg">
 <meta property="og:locale" content="${m.locale}">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Ccircle cx='13' cy='13' r='10.5' fill='none' stroke='%234F7E6F' stroke-width='2.4' stroke-linecap='round' stroke-dasharray='57 66' transform='rotate(-58 13 13)'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Ccircle cx='13' cy='13' r='10.5' fill='none' stroke='%237C5E3A' stroke-width='2.4' stroke-linecap='round' stroke-dasharray='57 66' transform='rotate(-58 13 13)'/%3E%3C/svg%3E">
 ${jsonLd(lang)}
 <script defer src="/_vercel/insights/script.js"></script>
 `;
@@ -259,7 +259,7 @@ ${alts}<meta property="og:type" content="website">
 <meta property="og:image" content="${BASE}/marc.jpg">
 <meta property="og:locale" content="${t.locale}">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Ccircle cx='13' cy='13' r='10.5' fill='none' stroke='%234F7E6F' stroke-width='2.4' stroke-linecap='round' stroke-dasharray='57 66' transform='rotate(-58 13 13)'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Ccircle cx='13' cy='13' r='10.5' fill='none' stroke='%237C5E3A' stroke-width='2.4' stroke-linecap='round' stroke-dasharray='57 66' transform='rotate(-58 13 13)'/%3E%3C/svg%3E">
 <script type="application/ld+json">${JSON.stringify(faqLd)}</script>
 <script type="application/ld+json">${JSON.stringify(crumbLd)}</script>
 <script defer src="/_vercel/insights/script.js"></script>
@@ -298,7 +298,7 @@ function legalPage(pg, shell) {
 <title>${esc(pg.title)}</title>
 <meta name="description" content="${esc(pg.desc)}">
 <link rel="canonical" href="${url}">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Ccircle cx='13' cy='13' r='10.5' fill='none' stroke='%234F7E6F' stroke-width='2.4' stroke-linecap='round' stroke-dasharray='57 66' transform='rotate(-58 13 13)'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Ccircle cx='13' cy='13' r='10.5' fill='none' stroke='%237C5E3A' stroke-width='2.4' stroke-linecap='round' stroke-dasharray='57 66' transform='rotate(-58 13 13)'/%3E%3C/svg%3E">
 <script defer src="/_vercel/insights/script.js"></script>
 ${style}
 <style>.legal h2{margin-top:40px;font-size:1.5rem}.legal p,.legal ul{margin-top:14px;max-width:44em}.legal li{margin-top:6px}.legal a{color:var(--ink)}</style>
@@ -349,7 +349,7 @@ function pageHead(lang, t, o) {
 <meta property="og:image" content="${BASE}/marc.jpg">
 <meta property="og:locale" content="${t.locale}">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Ccircle cx='13' cy='13' r='10.5' fill='none' stroke='%234F7E6F' stroke-width='2.4' stroke-linecap='round' stroke-dasharray='57 66' transform='rotate(-58 13 13)'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Ccircle cx='13' cy='13' r='10.5' fill='none' stroke='%237C5E3A' stroke-width='2.4' stroke-linecap='round' stroke-dasharray='57 66' transform='rotate(-58 13 13)'/%3E%3C/svg%3E">
 ${o.ld.map(x => `<script type="application/ld+json">${JSON.stringify(x)}</script>`).join('\n')}
 <script defer src="/_vercel/insights/script.js"></script>
 `;
