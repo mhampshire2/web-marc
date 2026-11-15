@@ -106,7 +106,7 @@ ${alt}
 <meta property="og:title" content="${esc(m.title)}">
 <meta property="og:description" content="${esc(m.desc)}">
 <meta property="og:url" content="${BASE}${URLS[lang]}">
-<meta property="og:image" content="${BASE}/marc.jpg">
+<meta property="og:image" content="${BASE}/marc-share.jpg">
 <meta property="og:locale" content="${m.locale}">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Ccircle cx='13' cy='13' r='10.5' fill='none' stroke='%237C5E3A' stroke-width='2.4' stroke-linecap='round' stroke-dasharray='57 66' transform='rotate(-58 13 13)'/%3E%3C/svg%3E">
@@ -156,7 +156,14 @@ const lowerEnglish = h => {
 };
 fs.writeFileSync(path.join(OUT, 'index.html'), lowerEnglish(build('es')));
 fs.writeFileSync(path.join(OUT, 'ca.html'), lowerEnglish(build('ca')));
-fs.writeFileSync(path.join(OUT, 'en.html'), build('en'));
+// Translate the photo alt texts on the Catalan and English home pages
+const ALTS = {
+  en: [['Marc Hampshire, psicólogo, en su consulta del Eixample', 'Marc Hampshire, psychologist, in his practice in the Eixample'], ['Sala de consulta de psicoterapia en el Eixample, Barcelona', 'Therapy room in the Eixample, Barcelona']],
+  ca: [['Marc Hampshire, psicólogo, en su consulta del Eixample', "Marc Hampshire, psicòleg, a la seva consulta de l'Eixample"], ['Sala de consulta de psicoterapia en el Eixample, Barcelona', "Sala de consulta de psicoteràpia a l'Eixample, Barcelona"]]
+};
+const altFix = (h, lang) => ALTS[lang].reduce((x, [a, b]) => x.split(a).join(b), h);
+fs.writeFileSync(path.join(OUT, 'en.html'), altFix(build('en'), 'en'));
+fs.writeFileSync(path.join(OUT, 'ca.html'), altFix(fs.readFileSync(path.join(OUT, 'ca.html'), 'utf8'), 'ca'));
 try { fs.unlinkSync(path.join(OUT, 'vercel.json')); } catch (e) {}
 fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${BASE}/sitemap.xml\n`);
 
@@ -275,7 +282,7 @@ ${alts}<meta property="og:type" content="website">
 <meta property="og:title" content="${esc(svc.title)}">
 <meta property="og:description" content="${esc(svc.desc)}">
 <meta property="og:url" content="${url}">
-<meta property="og:image" content="${BASE}/marc.jpg">
+<meta property="og:image" content="${BASE}/marc-share.jpg">
 <meta property="og:locale" content="${t.locale}">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Ccircle cx='13' cy='13' r='10.5' fill='none' stroke='%237C5E3A' stroke-width='2.4' stroke-linecap='round' stroke-dasharray='57 66' transform='rotate(-58 13 13)'/%3E%3C/svg%3E">
@@ -366,7 +373,7 @@ function pageHead(lang, t, o) {
 <meta property="og:title" content="${esc(o.title)}">
 <meta property="og:description" content="${esc(o.desc)}">
 <meta property="og:url" content="${o.url}">
-<meta property="og:image" content="${BASE}/marc.jpg">
+<meta property="og:image" content="${BASE}/marc-share.jpg">
 <meta property="og:locale" content="${t.locale}">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Ccircle cx='13' cy='13' r='10.5' fill='none' stroke='%237C5E3A' stroke-width='2.4' stroke-linecap='round' stroke-dasharray='57 66' transform='rotate(-58 13 13)'/%3E%3C/svg%3E">
