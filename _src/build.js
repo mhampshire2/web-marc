@@ -461,10 +461,10 @@ function linkAreas(file, map) {
   for (const [key, url] of Object.entries(map)) h = h.replace(new RegExp('(<h3 data-i18n="' + key + '">)([^<]+)(</h3>)'), `$1<a href="${url}">$2</a>$3`);
   fs.writeFileSync(fp, h);
 }
-const ES_AREAS = { a1h: '/psicologo-relaciones-pareja-barcelona.html', a2h: '/psicologo-ansiedad-barcelona.html', a4h: '/psicologo-autoestima-barcelona.html', a5h: '/psicologo-duelo-barcelona.html', a9h: '/psicologo-estres-burnout-barcelona.html' };
-const CA_AREAS = { a1h: '/psicologo-relaciones-pareja-barcelona.html', a2h: '/psicologo-ansiedad-barcelona.html', a4h: '/psicologo-autoestima-barcelona.html', a5h: '/psicologo-duelo-barcelona.html', a9h: '/psicologo-estres-burnout-barcelona.html' };
-linkAreas('index.html', ES_AREAS); linkAreas('ca.html', CA_AREAS);
-linkAreas('en.html', { a2h: '/anxiety-therapy-in-english.html', a5h: '/grief-counselling-in-english.html', a9h: '/burnout-therapy-in-english.html' });
+const ES_AREAS = { a1h: '/psicologo-relaciones-pareja-barcelona.html', a2h: '/psicologo-ansiedad-barcelona.html', a4h: '/psicologo-autoestima-barcelona.html', a5h: '/psicologo-duelo-barcelona.html', a9h: '/psicologo-estres-burnout-barcelona.html', a10h: '/psicologo-en-ingles-barcelona.html' };
+const CA_AREAS = { a1h: '/psicoleg-relacions-barcelona.html', a2h: '/psicoleg-ansietat-barcelona.html', a4h: '/psicoleg-autoestima-barcelona.html', a5h: '/psicoleg-dol-barcelona.html', a9h: '/psicoleg-estres-burnout-barcelona.html', a10h: '/psicoleg-en-angles-barcelona.html' };
+const EN_AREAS = { a1h: '/relationship-therapy-barcelona.html', a2h: '/anxiety-therapy-in-english.html', a4h: '/self-esteem-therapy-barcelona.html', a5h: '/grief-counselling-in-english.html', a9h: '/burnout-therapy-in-english.html', a10h: '/therapy-for-expats.html' };
+linkAreas('index.html', ES_AREAS); linkAreas('ca.html', CA_AREAS); linkAreas('en.html', EN_AREAS);
 
 
 // Site-wide footer links (internal linking): pages in the same language + articles

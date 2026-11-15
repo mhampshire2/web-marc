@@ -128,8 +128,8 @@ module.exports = C => {
     {
       lang: 'es',
       file: 'psicologo-en-ingles-barcelona.html',
-      title: 'Psicólogo en inglés en Barcelona | Terapia en inglés nativo',
-      desc: 'Psicólogo que habla inglés en Barcelona (Eixample) y online: terapia en inglés con un psicólogo colegiado de lengua materna inglesa, también en castellano o catalán. 70 €.',
+      title: 'Psicólogo en inglés en Barcelona (Eixample) | Marc Hampshire',
+      desc: 'Psicólogo que habla inglés en Barcelona (Eixample) y online: terapia en inglés con un psicólogo colegiado, también en castellano o catalán. 70 €.',
       crumb: 'Psicólogo en inglés',
       h1: 'Psicólogo en inglés en Barcelona',
       lead: 'Hablar de lo que sientes en tu propio idioma, sin tener que traducirte. Terapia en inglés con un psicólogo general sanitario colegiado para quien vive en Barcelona o en el resto de España.',
@@ -147,7 +147,7 @@ module.exports = C => {
         {
           h: 'Cómo trabajamos',
           p: [
-            'Soy medio inglés y el inglés es una de mis lenguas maternas; también hablo castellano como lengua nativa y catalán. La terapia puede ser íntegramente en inglés o combinar idiomas, según lo que te resulte más cómodo.',
+            'Hablo inglés, castellano y catalán. La terapia puede ser íntegramente en inglés o combinar idiomas, según lo que te resulte más cómodo.',
             'Trabajo desde la psicoterapia Gestalt y el psicoanálisis relacional, con un proceso de exploración y no de soluciones rápidas.',
             'Puedes ver más en las páginas en inglés: <a href="/therapy-for-expats.html" hreflang="en">therapy for expats</a>, <a href="/anxiety-therapy-in-english.html" hreflang="en">anxiety therapy in English</a> y <a href="/online-therapy-in-english-spain.html" hreflang="en">online therapy in English</a>.'
           ]
@@ -198,7 +198,7 @@ module.exports = C => {
         ['¿Qué necesito para las sesiones?', 'Un dispositivo con cámara y micrófono, una conexión estable y un espacio tranquilo y privado.'],
         ['¿Estás colegiado?', 'Sí. Soy psicólogo general sanitario, colegiado en el Col·legi Oficial de Psicologia de Catalunya (nº 30868).'],
         ['¿Cómo se paga?', 'Por Bizum o transferencia, y recibes factura de cada sesión.'],
-        ['¿Puedo hacerla en inglés?', 'Sí. El inglés es una de mis lenguas maternas.'],
+        ['¿Puedo hacerla en inglés?', 'Sí, también atiendo en inglés.'],
         FAQ_COST
       ]
     }

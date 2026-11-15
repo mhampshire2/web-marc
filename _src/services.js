@@ -503,12 +503,28 @@ const CORE = [
 
 // --- Extra pages (new English, Spanish and Catalan pages) and cross-language links
 const CONSTS = { PRICE_EN, PRICE_ES, PROCESS_EN, PROCESS_ES, WHERE_EN, WHERE_ES, CRISIS_EN, CRISIS_ES };
-const KEEP = new Set(['terapia-gestalt-barcelona.html', 'gestalt-therapy-barcelona.html']);
-const ALL = CORE.concat(require('./services-new-en.js')(CONSTS), require('./services-new-es.js')(CONSTS)).filter(x => !CORE.includes(x) ? KEEP.has(x.file) : true);
+const EXTRA = [
+  'terapia-gestalt-barcelona.html', 'gestalt-therapy-barcelona.html',
+  'psicologo-depresion-barcelona.html', 'psicologo-online-espana.html', 'psicologo-en-ingles-barcelona.html'
+];
+const CA_KEEP = ['psicoleg-ansietat-barcelona.html', 'psicoleg-dol-barcelona.html', 'psicoleg-autoestima-barcelona.html', 'psicoleg-estres-burnout-barcelona.html',
+  'psicoleg-relacions-barcelona.html', 'psicoleg-eixample.html', 'psicoterapia-gestalt-barcelona.html', 'psicoleg-depressio-barcelona.html', 'psicoleg-en-linia-espanya.html'];
+const KEEP = new Set(EXTRA.concat(CA_KEEP));
+const NEW = require('./services-new-en.js')(CONSTS).concat(require('./services-new-es.js')(CONSTS), require('./services-new-ca.js')(CONSTS)).filter(x => KEEP.has(x.file));
+const ALL = CORE.concat(NEW, require('./services-more.js')(CONSTS));
 
-// Groups of equivalent pages in different languages (used for hreflang and the language switcher)
+// Groups of equivalent pages in different languages (used for hreflang and the language switcher): [es, en, ca]
 const GROUPS = [
-  ['terapia-gestalt-barcelona.html', 'gestalt-therapy-barcelona.html']
+  ['psicologo-ansiedad-barcelona.html', 'anxiety-therapy-in-english.html', 'psicoleg-ansietat-barcelona.html'],
+  ['psicologo-duelo-barcelona.html', 'grief-counselling-in-english.html', 'psicoleg-dol-barcelona.html'],
+  ['psicologo-estres-burnout-barcelona.html', 'burnout-therapy-in-english.html', 'psicoleg-estres-burnout-barcelona.html'],
+  ['psicologo-depresion-barcelona.html', 'depression-therapy-in-english.html', 'psicoleg-depressio-barcelona.html'],
+  ['terapia-gestalt-barcelona.html', 'gestalt-therapy-barcelona.html', 'psicoterapia-gestalt-barcelona.html'],
+  ['psicologo-online-espana.html', 'online-therapy-in-english-spain.html', 'psicoleg-en-linia-espanya.html'],
+  ['psicologo-autoestima-barcelona.html', 'self-esteem-therapy-barcelona.html', 'psicoleg-autoestima-barcelona.html'],
+  ['psicologo-relaciones-pareja-barcelona.html', 'relationship-therapy-barcelona.html', 'psicoleg-relacions-barcelona.html'],
+  ['psicologo-eixample.html', 'psychologist-eixample-barcelona.html', 'psicoleg-eixample.html'],
+  ['psicologo-en-ingles-barcelona.html', 'therapy-for-expats.html', 'psicoleg-en-angles-barcelona.html']
 ];
 const BY_FILE = Object.fromEntries(ALL.map(s => [s.file, s]));
 for (const g of GROUPS) {
