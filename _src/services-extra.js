@@ -59,7 +59,7 @@ const VIEW = {
     h: 'Cómo trabajo',
     p: [
       'Trabajo desde la Gestalt y el psicoanálisis relacional. No extirpamos emociones ni te doy soluciones desde fuera: ampliamos tu capacidad de estar con lo que sientes y sostenerlo, porque las emociones son sabias y te orientan.',
-      'Las tres primeras sesiones son de exploración y en la cuarta empieza el tratamiento: hablamos de los objetivos y establecemos un plan. Si buscas consejos o una solución rápida, probablemente no soy tu terapeuta. <a href="/terapia-gestalt-barcelona.html">Más sobre la terapia Gestalt</a>.'
+      'Las tres primeras sesiones son de exploración y en la cuarta empieza el proceso: hablamos de los objetivos y establecemos un plan. Si buscas consejos o una solución rápida, probablemente no soy tu terapeuta. <a href="/terapia-gestalt-barcelona.html">Más sobre la terapia Gestalt</a>.'
     ],
     faq: [
       ['¿Cuánto cuesta y cuánto dura una sesión?', '70 € por sesión individual, de 45 a 50 minutos.'],
