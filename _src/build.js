@@ -242,7 +242,7 @@ function servicePage(svc, shell) {
     <div class="figure">
       <div class="ring">
         <svg class="arc" viewBox="0 0 200 200" aria-hidden="true" style="--len:610;--gap:56"><circle cx="100" cy="100" r="97"/></svg>
-        <div class="portrait"><img src="/marc.jpg" alt="Marc Hampshire Viñamata" width="440" height="440" loading="eager"></div>
+        <div class="portrait"><img src="/marc-sonrisa.webp" alt="Marc Hampshire Viñamata" width="440" height="440" loading="eager"></div>
       </div>
     </div>
   </div>
