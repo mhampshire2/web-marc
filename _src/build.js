@@ -198,13 +198,21 @@ function servicePage(svc, shell) {
   const url = SVC_URL(svc.file);
   const list = sec => sec.list ? `<ul class="areas">${sec.list.map(([h, p]) => `\n        <li><h3>${h}</h3><p>${p}</p></li>`).join('')}\n      </ul>` : '';
   const paras = sec => sec.p ? `<div class="approach">${sec.p.map(x => `<p>${x}</p>`).join('')}</div>` : '';
-  const sections = svc.sections.map(sec => `
+  const ALT = { es: 'Sala de consulta de psicoterapia en el Eixample, Barcelona', ca: 'Sala de consulta de psicoteràpia a l\'Eixample, Barcelona', en: 'Therapy room in the Eixample, Barcelona' };
+  const SVC_CSS = `<style>.svc-split{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:start}.svc-photo{margin:28px 0 0}.svc-photo img{width:100%;height:auto;border-radius:20px;display:block;object-fit:cover;aspect-ratio:3/4}@media(max-width:760px){.svc-split{grid-template-columns:1fr}.svc-photo{max-width:420px}}</style>`;
+  const ALT2 = { es: 'Sala de espera de la consulta en el Eixample, Barcelona', ca: 'Sala d\'espera de la consulta a l\'Eixample, Barcelona', en: 'Waiting room of the practice in the Eixample, Barcelona' };
+  const photo = (src, alt) => `<figure class="svc-photo"><img src="${src}" alt="${alt}" width="720" height="960" loading="lazy" decoding="async"></figure>`;
+  const sections = svc.sections.map(sec => {
+    const body = sec.p ? `<div style="margin-top:28px">${paras(sec)}</div>` : list(sec);
+    const pic = !sec.p ? null : /proceso|procés|process/i.test(sec.h) ? photo('/consulta-sala.webp', ALT[lang]) : /^(Cómo trabajamos|Com treballem|How we work)$/i.test(sec.h) ? photo('/consulta-espera.webp', ALT2[lang]) : null;
+    return `
   <section class="block">
     <div class="wrap">
       <h2>${sec.h}</h2>
-      ${sec.p ? `<div style="margin-top:28px">${paras(sec)}</div>` : list(sec)}
+      ${pic ? `${SVC_CSS}<div class="svc-split"><div>${body}</div>${pic}</div>` : body}
     </div>
-  </section>`).join('\n');
+  </section>`;
+  }).join('\n');
   const related = SERVICES.filter(o => o.lang === lang && o.file !== svc.file);
   const relatedHtml = `<p class="muted" style="margin-top:28px">${t.more} ${related.map(o => `<a href="/${o.file}">${o.crumb}</a>`).join(' · ')}</p>`;
   const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: svc.faq.map(([q, a]) => ({ '@type': 'Question', name: strip(q), acceptedAnswer: { '@type': 'Answer', text: strip(a) } })) };
