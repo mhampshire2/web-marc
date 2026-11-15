@@ -145,8 +145,17 @@ function build(lang) {
 }
 
 fs.mkdirSync(OUT, { recursive: true });
-fs.writeFileSync(path.join(OUT, 'index.html'), build('es'));
-fs.writeFileSync(path.join(OUT, 'ca.html'), build('ca'));
+// On the Spanish and Catalan pages the English section goes lower, just before the FAQ
+const lowerEnglish = h => {
+  const a = h.indexOf('<section class="block" id="ingles">');
+  const b = h.indexOf('</section>', a) + '</section>'.length;
+  const block = h.slice(a, b);
+  h = h.slice(0, a) + h.slice(b).replace(/^\s*\n/, '');
+  const q = h.indexOf('<section class="block" id="preguntas">');
+  return h.slice(0, q) + block + '\n\n  ' + h.slice(q);
+};
+fs.writeFileSync(path.join(OUT, 'index.html'), lowerEnglish(build('es')));
+fs.writeFileSync(path.join(OUT, 'ca.html'), lowerEnglish(build('ca')));
 fs.writeFileSync(path.join(OUT, 'en.html'), build('en'));
 try { fs.unlinkSync(path.join(OUT, 'vercel.json')); } catch (e) {}
 fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${BASE}/sitemap.xml\n`);
